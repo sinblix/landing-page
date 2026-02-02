@@ -13,7 +13,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between h-24 md:h-28">
           <Link href="/" className="flex items-center">
-            <Logo variant="white" size="md" />
+            <Logo variant="white" size="sm" />
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <LanguageSelector />
