@@ -1,7 +1,23 @@
+"use client";
+
 import { Logo } from "../Logo";
-import { brandConfig } from "@/app/config/brand";
+import { useTranslation } from "@/app/i18n/hooks";
+
+const socialLinks = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/sinblix.ven/?hl=en",
+    icon: "instagram",
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/584121785954",
+    icon: "whatsapp",
+  },
+];
 
 export function Footer() {
+  const t = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -11,13 +27,15 @@ export function Footer() {
           <div>
             <Logo variant="white" size="sm" />
             <p className="mt-4 text-gray-400">
-              Fábrica de software que transforma negocios
+              {t.footer.tagline}
             </p>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">Enlaces</h3>
+            <h3 className="font-semibold mb-4">
+              {t.language === "en" ? "Links" : "Enlaces"}
+            </h3>
             <ul className="space-y-2">
-              {brandConfig.content.footer.links.map((link) => (
+              {t.footer.links.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
@@ -30,9 +48,9 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">Síguenos</h3>
+            <h3 className="font-semibold mb-4">{t.footer.follow}</h3>
             <div className="flex gap-4">
-              {brandConfig.content.footer.social.map((social) => (
+              {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
@@ -65,7 +83,10 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} SINBLIX. Todos los derechos reservados.</p>
+          <p>
+            &copy; {currentYear} SINBLIX.{" "}
+            {t.language === "en" ? "All rights reserved." : "Todos los derechos reservados."}
+          </p>
         </div>
       </div>
     </footer>

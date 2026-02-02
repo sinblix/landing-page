@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { brandConfig } from "./config/brand";
+import { es } from "./i18n/translations/es";
+import { LanguageProviderWrapper } from "./components/LanguageProviderWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: brandConfig.metadata.title,
-  description: brandConfig.metadata.description,
-  keywords: brandConfig.metadata.keywords,
+  title: es.metadata.title,
+  description: es.metadata.description,
+  keywords: [...es.metadata.keywords],
 };
 
 export default function RootLayout({
@@ -29,7 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <LanguageProviderWrapper>
+          {children}
+        </LanguageProviderWrapper>
       </body>
     </html>
   );
