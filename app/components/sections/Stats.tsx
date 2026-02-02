@@ -52,7 +52,7 @@ function AnimatedCounter({
 
     const numericValue = parseInt(value.replace(/\D/g, ""));
     if (isNaN(numericValue)) {
-      setCount(0);
+      // count ya está inicializado en 0, no necesitamos hacer nada
       return;
     }
 

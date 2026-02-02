@@ -53,7 +53,7 @@ export function Testimonials() {
                 ))}
               </div>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                "{currentTestimonial.testimonial}"
+                &ldquo;{currentTestimonial.testimonial}&rdquo;
               </p>
               <div>
                 <h4 className="font-bold text-gray-900">
