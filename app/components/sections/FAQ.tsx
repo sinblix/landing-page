@@ -4,6 +4,12 @@ import { Section } from "../Section";
 import { useTranslation } from "@/app/i18n/hooks";
 import { useState } from "react";
 
+type FAQItem = {
+  readonly category: string;
+  readonly question: string;
+  readonly answer: string;
+};
+
 export function FAQ() {
   const t = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -13,9 +19,10 @@ export function FAQ() {
     keyof typeof t.faq.categories
   >;
 
-  const filteredItems = selectedCategory
-    ? t.faq.items.filter((item) => item.category === selectedCategory)
-    : t.faq.items;
+  const allItems = t.faq.items as readonly FAQItem[];
+  const filteredItems: readonly FAQItem[] = selectedCategory
+    ? allItems.filter((item) => item.category === selectedCategory)
+    : allItems;
 
   return (
     <Section variant="light" id="faq">
@@ -61,7 +68,7 @@ export function FAQ() {
       {/* FAQ Items */}
       <div className="max-w-3xl mx-auto space-y-4">
         {filteredItems.map((item, index) => {
-          const globalIndex = t.faq.items.indexOf(item);
+          const globalIndex = allItems.findIndex((i) => i === item);
           const isOpen = openIndex === globalIndex;
 
           return (

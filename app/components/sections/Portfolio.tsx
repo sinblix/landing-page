@@ -25,16 +25,14 @@ function getProjectImage(title: string): string {
   return imageMap[title] || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop";
 }
 
-function PortfolioCard({
-  project,
-}: {
-  project: {
-    title: string;
-    description: string;
-    technologies: string[];
-    image: string;
-  };
-}) {
+type Project = {
+  readonly title: string;
+  readonly description: string;
+  readonly technologies: readonly string[];
+  readonly image: string;
+};
+
+function PortfolioCard({ project }: { project: Project }) {
   const [imageError, setImageError] = useState(false);
   const imageUrl = getProjectImage(project.title);
 
