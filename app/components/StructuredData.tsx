@@ -44,7 +44,8 @@ export function StructuredData() {
       address: {
         "@type": "PostalAddress",
         addressCountry: "VE",
-        addressRegion: language === "es" ? "Venezuela" : "Venezuela",
+        addressRegion: "Lara",
+        addressLocality: "Barquisimeto",
       },
     };
 
