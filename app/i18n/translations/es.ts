@@ -2,7 +2,7 @@ export const es = {
   metadata: {
     title: "SINBLIX - Fábrica de Software | Desarrollo a Medida",
     description:
-      "Desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, y consultoría tecnológica para startups y empresas. Transformamos ideas en software que impulsa tu negocio.",
+      "SINBLIX es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, e inteligencia artificial. Servimos a empresas en Barquisimeto, Caracas y toda Latinoamérica. Transformamos ideas en software que impulsa tu negocio.",
     keywords: [
       // Servicios principales
       "desarrollo de software",
@@ -38,17 +38,17 @@ export const es = {
       "SINBLIX",
     ],
     openGraph: {
-      title: "SINBLIX - Fábrica de Software | Desarrollo a Medida",
+      title: "SINBLIX - Fábrica de Software en Venezuela | Desarrollo a Medida",
       description:
-        "Desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, y consultoría tecnológica para startups y empresas.",
-      url: "https://sinblix.com",
+        "SINBLIX es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud, DevOps e inteligencia artificial. Servimos empresas en Barquisimeto, Caracas y toda Latinoamérica.",
+      url: "https://sinblix.lat",
       siteName: "SINBLIX",
       images: [
         {
-          url: "/logos/logo-white.svg",
+          url: "https://sinblix.lat/logos/mango.svg",
           width: 1200,
           height: 630,
-          alt: "SINBLIX - Fábrica de Software",
+          alt: "SINBLIX - Fábrica de Software en Venezuela",
         },
       ],
       locale: "es_VE",
@@ -56,16 +56,16 @@ export const es = {
     },
     twitter: {
       card: "summary_large_image",
-      title: "SINBLIX - Fábrica de Software | Desarrollo a Medida",
+      title: "SINBLIX - Fábrica de Software en Venezuela | Desarrollo a Medida",
       description:
-        "Desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, y consultoría tecnológica.",
-      images: ["/logos/logo-white.svg"],
+        "SINBLIX es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud, DevOps e inteligencia artificial.",
+      images: ["https://sinblix.lat/logos/mango.svg"],
     },
   },
   hero: {
-    title: "Construimos software que transforma negocios",
+    title: "SINBLIX: Construimos software que transforma negocios",
     subtitle:
-      "Desarrollo a medida, soluciones cloud y consultoría tecnológica para startups y empresas",
+      "Fábrica de software en Venezuela. Desarrollo a medida, soluciones cloud, inteligencia artificial y consultoría tecnológica para startups y empresas en Barquisimeto, Caracas y toda Latinoamérica",
     cta: "Solicita una consulta",
   },
   services: {
@@ -147,7 +147,7 @@ export const es = {
     button: "Contactar ahora",
   },
   footer: {
-    tagline: "Fábrica de software que transforma negocios",
+    tagline: "Fábrica de software en Venezuela que transforma negocios",
     links: [
       { label: "Servicios", href: "#servicios" },
       { label: "Proceso", href: "#proceso" },

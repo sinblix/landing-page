@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sinblix.com/sitemap.xml
+Sitemap: https://sinblix.lat/sitemap.xml

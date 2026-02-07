@@ -2,7 +2,7 @@ export const en = {
   metadata: {
     title: "SINBLIX - Software Factory | Custom Development",
     description:
-      "Custom software development, web and mobile solutions, cloud and DevOps, and technology consulting for startups and companies. We transform ideas into software that drives your business.",
+      "SINBLIX is a software factory in Venezuela specializing in custom software development, web and mobile solutions, cloud, DevOps, and artificial intelligence. We serve companies in Barquisimeto, Caracas, and throughout Latin America. We transform ideas into software that drives your business.",
     keywords: [
       // Main services
       "software development",
@@ -38,17 +38,17 @@ export const en = {
       "SINBLIX",
     ],
     openGraph: {
-      title: "SINBLIX - Software Factory | Custom Development",
+      title: "SINBLIX - Software Factory in Venezuela | Custom Development",
       description:
-        "Custom software development, web and mobile solutions, cloud and DevOps, and technology consulting for startups and companies.",
-      url: "https://sinblix.com",
+        "SINBLIX is a software factory in Venezuela specializing in custom software development, web and mobile solutions, cloud, DevOps, and artificial intelligence. We serve companies in Barquisimeto, Caracas, and throughout Latin America.",
+      url: "https://sinblix.lat",
       siteName: "SINBLIX",
       images: [
         {
-          url: "/logos/logo-white.svg",
+          url: "https://sinblix.lat/logos/mango.svg",
           width: 1200,
           height: 630,
-          alt: "SINBLIX - Software Factory",
+          alt: "SINBLIX - Software Factory in Venezuela",
         },
       ],
       locale: "en_US",
@@ -56,16 +56,16 @@ export const en = {
     },
     twitter: {
       card: "summary_large_image",
-      title: "SINBLIX - Software Factory | Custom Development",
+      title: "SINBLIX - Software Factory in Venezuela | Custom Development",
       description:
-        "Custom software development, web and mobile solutions, cloud and DevOps, and technology consulting.",
-      images: ["/logos/logo-white.svg"],
+        "SINBLIX is a software factory in Venezuela specializing in custom software development, web and mobile solutions, cloud, DevOps, and artificial intelligence.",
+      images: ["https://sinblix.lat/logos/mango.svg"],
     },
   },
   hero: {
-    title: "We build software that transforms businesses",
+    title: "SINBLIX: We build software that transforms businesses",
     subtitle:
-      "Custom development, cloud solutions and technology consulting for startups and companies",
+      "Software factory in Venezuela. Custom development, cloud solutions, artificial intelligence and technology consulting for startups and companies in Barquisimeto, Caracas and throughout Latin America",
     cta: "Request a consultation",
   },
   services: {
@@ -147,7 +147,7 @@ export const en = {
     button: "Contact now",
   },
   footer: {
-    tagline: "Software factory that transforms businesses",
+    tagline: "Software factory in Venezuela that transforms businesses",
     links: [
       { label: "Services", href: "#servicios" },
       { label: "Process", href: "#proceso" },

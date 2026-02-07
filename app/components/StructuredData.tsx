@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export function StructuredData() {
   const t = useTranslation();
   const language = t.language;
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sinblix.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sinblix.lat";
 
   useEffect(() => {
     // Limpiar schemas anteriores
@@ -19,7 +19,7 @@ export function StructuredData() {
       "@type": "Organization",
       name: "SINBLIX",
       url: baseUrl,
-      logo: `${baseUrl}/logos/logo-white.svg`,
+      logo: `${baseUrl}/logos/mango.svg`,
       description: t.metadata.description,
       sameAs: [
         "https://www.instagram.com/sinblix.ven/",
