@@ -335,11 +335,10 @@ export const en = {
     subtitle: "Experts passionate about technology",
     items: [
       {
-        name: "Elkyn Diosa",
+        name: "Roberto Silva",
         role: "CTO",
         bio: "Software architect and technical leader with over 10 years of experience in enterprise solution development and high-growth startups.",
-        image: "/team/elkyn.jpg",
-        linkedin: "https://www.linkedin.com/in/elkyn-diosa-software-ingeneer/",
+        image: "https://i.pravatar.cc/400?img=15",
       },
       {
         name: "Stefany Torrellas",
