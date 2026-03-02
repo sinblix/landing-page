@@ -33,7 +33,7 @@ async function getLanguageFromCookies(): Promise<"es" | "en"> {
 export async function generateMetadata(): Promise<Metadata> {
   const lang = await getLanguageFromCookies();
   const t = lang === "en" ? en : es;
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sinblix.lat";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
 
   return {
     title: t.metadata.title,

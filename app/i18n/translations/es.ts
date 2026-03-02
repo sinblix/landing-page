@@ -41,11 +41,11 @@ export const es = {
       title: "SINBLIX - Fábrica de Software en Venezuela | Desarrollo a Medida",
       description:
         "SINBLIX es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud, DevOps e inteligencia artificial. Servimos empresas en Barquisimeto, Caracas y toda Latinoamérica.",
-      url: "https://sinblix.lat",
+      url: "https://www.sinblix.com",
       siteName: "SINBLIX",
       images: [
         {
-          url: "https://sinblix.lat/logos/mango.svg",
+          url: "https://www.sinblix.com/logos/mango.svg",
           width: 1200,
           height: 630,
           alt: "SINBLIX - Fábrica de Software en Venezuela",
@@ -59,7 +59,7 @@ export const es = {
       title: "SINBLIX - Fábrica de Software en Venezuela | Desarrollo a Medida",
       description:
         "SINBLIX es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud, DevOps e inteligencia artificial.",
-      images: ["https://sinblix.lat/logos/mango.svg"],
+      images: ["https://www.sinblix.com/logos/mango.svg"],
     },
   },
   hero: {

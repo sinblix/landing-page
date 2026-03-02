@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export function StructuredData() {
   const t = useTranslation();
   const language = t.language;
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sinblix.lat";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
 
   useEffect(() => {
     // Limpiar schemas anteriores
