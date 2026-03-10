@@ -66,23 +66,97 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     alternates: {
       canonical: baseUrl,
-      languages: {
-        es: `${baseUrl}?lang=es`,
-        en: `${baseUrl}?lang=en`,
-      },
     },
     metadataBase: new URL(baseUrl),
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const lang = await getLanguageFromCookies();
+  const t = lang === "en" ? en : es;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "SINBLIX",
+    url: baseUrl,
+    logo: `${baseUrl}/logos/mango.svg`,
+    description: t.metadata.description,
+    sameAs: [
+      "https://www.instagram.com/sinblix.ven/",
+      "https://wa.me/584121785954",
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+58-412-178-5954",
+      contactType: "customer service",
+      availableLanguage: ["Spanish", "English"],
+    },
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "SINBLIX",
+    description: t.metadata.description,
+    url: baseUrl,
+    telephone: "+58-412-178-5954",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "VE",
+      addressRegion: "Lara",
+      addressLocality: "Barquisimeto",
+    },
+  };
+
+  const serviceSchemas = t.services.items.map(
+    (service: { title: string; description: string }) => ({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: service.title,
+      description: service.description,
+      provider: {
+        "@type": "Organization",
+        name: "SINBLIX",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Venezuela",
+      },
+    })
+  );
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "SINBLIX",
+    url: baseUrl,
+    description: t.metadata.description,
+    inLanguage: lang === "es" ? "es-VE" : "en-US",
+  };
+
+  const schemas = [
+    organizationSchema,
+    localBusinessSchema,
+    ...serviceSchemas,
+    websiteSchema,
+  ];
+
   return (
-    <html lang="es">
+    <html lang={lang}>
       <head>
+        {schemas.map((schema, index) => (
+          <script
+            key={`structured-data-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))}
         {/* Meta Pixel Code */}
         <script
           dangerouslySetInnerHTML={{

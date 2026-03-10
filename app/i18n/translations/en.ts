@@ -152,6 +152,7 @@ export const en = {
       { label: "Services", href: "#servicios" },
       { label: "Process", href: "#proceso" },
       { label: "Contact", href: "#contacto" },
+      { label: "Privacy Policy", href: "/politica-privacidad" },
     ],
     follow: "Follow us",
   },

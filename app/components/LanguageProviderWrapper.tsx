@@ -3,7 +3,6 @@
 import { LanguageProvider } from "@/app/contexts/LanguageContext";
 import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/app/contexts/LanguageContext";
-import { StructuredData } from "./StructuredData";
 
 function LangUpdater() {
   const context = useContext(LanguageContext);
@@ -22,7 +21,6 @@ export function LanguageProviderWrapper({ children }: { children: React.ReactNod
   return (
     <LanguageProvider>
       <LangUpdater />
-      <StructuredData />
       {children}
     </LanguageProvider>
   );
