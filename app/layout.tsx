@@ -189,7 +189,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LanguageProviderWrapper>
+        <LanguageProviderWrapper initialLanguage={lang}>
           {children}
         </LanguageProviderWrapper>
       </body>

@@ -25,7 +25,7 @@ function TeamMember({
     .slice(0, 2);
 
   return (
-    <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-orange-500 transition-all duration-300 hover:-translate-y-2 text-center">
+    <div className="rounded-2xl p-8 border border-slate-700 bg-slate-900/80 hover:border-orange-400 transition-all duration-300 hover:-translate-y-2 text-center">
       <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-4 overflow-hidden">
         {!imageError ? (
           <Image
@@ -72,10 +72,10 @@ export function Team() {
   return (
     <Section variant="dark" id="equipo">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        <h2 className="sinblix-section-title text-white mb-4">
           {t.team.title}
         </h2>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-300/95 max-w-2xl mx-auto leading-relaxed">
           {t.team.subtitle}
         </p>
       </div>

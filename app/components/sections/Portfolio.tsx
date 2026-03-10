@@ -37,7 +37,7 @@ function PortfolioCard({ project }: { project: Project }) {
   const imageUrl = getProjectImage(project.title);
 
   return (
-    <div className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+    <div className="sinblix-card sinblix-card-lift group overflow-hidden">
       <div className="relative h-48 overflow-hidden bg-gradient-to-br from-orange-400 to-orange-600">
         {!imageError ? (
           <Image
@@ -50,7 +50,9 @@ function PortfolioCard({ project }: { project: Project }) {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
-            <div className="text-6xl opacity-50">🚀</div>
+            <div className="text-2xl font-bold uppercase tracking-widest text-white/70">
+              SINBLIX
+            </div>
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -83,10 +85,10 @@ export function Portfolio() {
   return (
     <Section variant="light" id="portafolio">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <h2 className="sinblix-section-title text-gray-900 mb-4">
           {t.portfolio.title}
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="sinblix-section-subtitle max-w-2xl mx-auto">
           {t.portfolio.subtitle}
         </p>
       </div>

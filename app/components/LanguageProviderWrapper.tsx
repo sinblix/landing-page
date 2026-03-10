@@ -3,6 +3,7 @@
 import { LanguageProvider } from "@/app/contexts/LanguageContext";
 import { useContext, useEffect } from "react";
 import { LanguageContext } from "@/app/contexts/LanguageContext";
+import { Language } from "@/app/i18n/config";
 
 function LangUpdater() {
   const context = useContext(LanguageContext);
@@ -17,9 +18,15 @@ function LangUpdater() {
   return null;
 }
 
-export function LanguageProviderWrapper({ children }: { children: React.ReactNode }) {
+export function LanguageProviderWrapper({
+  children,
+  initialLanguage,
+}: {
+  children: React.ReactNode;
+  initialLanguage: Language;
+}) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLanguage={initialLanguage}>
       <LangUpdater />
       {children}
     </LanguageProvider>

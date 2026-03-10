@@ -8,26 +8,32 @@ import Image from "next/image";
 function TechCard({
   tech,
   isFeatured,
-  getCategoryEmoji,
 }: {
   tech: { name: string; category: string };
   isFeatured: boolean;
-  getCategoryEmoji: () => string;
 }) {
   const [imageError, setImageError] = useState(false);
+  const fallbackLabel = tech.name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
 
   return (
     <div
-      className={`group rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border ${
+      className={`group rounded-xl p-6 transition-all duration-300 cursor-pointer border ${
         isFeatured
-          ? "bg-gradient-to-br from-orange-500/20 to-orange-600/20 border-orange-500 hover:bg-gradient-to-br hover:from-orange-500/30 hover:to-orange-600/30"
-          : "bg-gray-800 border-gray-700 hover:bg-gray-700 hover:border-orange-500"
+          ? "bg-gradient-to-br from-orange-500/20 to-orange-600/20 border-orange-400 hover:-translate-y-1"
+          : "bg-slate-900/70 border-slate-700 hover:-translate-y-1 hover:border-orange-400"
       }`}
     >
       <div className="text-center">
-        <div className="mb-3 opacity-70 group-hover:opacity-100 transition-opacity flex items-center justify-center h-12">
+        <div className="mb-3 opacity-85 group-hover:opacity-100 transition-opacity flex items-center justify-center h-12">
           {imageError ? (
-            <div className="text-4xl">{getCategoryEmoji()}</div>
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10 text-sm font-bold text-orange-300">
+              {fallbackLabel}
+            </div>
           ) : (
             <Image
               src={getTechLogo(tech.name)}
@@ -49,7 +55,9 @@ function TechCard({
         >
           {tech.name}
           {isFeatured && (
-            <span className="ml-2 text-xs">⭐</span>
+            <span className="ml-2 rounded-full bg-orange-400/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-orange-300">
+              Top
+            </span>
           )}
         </h3>
       </div>
@@ -103,10 +111,10 @@ export function Technologies() {
   return (
     <Section variant="dark" id="tecnologias">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        <h2 className="sinblix-section-title text-white mb-4">
           {t.technologies.title}
         </h2>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-300/95 max-w-2xl mx-auto leading-relaxed">
           {t.technologies.subtitle}
         </p>
       </div>
@@ -142,24 +150,11 @@ export function Technologies() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {filteredItems.map((tech, index) => {
           const isFeatured = (tech as { featured?: boolean }).featured === true;
-          const getCategoryEmoji = () => {
-            switch (tech.category) {
-              case "frontend": return "⚛️";
-              case "backend": return "⚙️";
-              case "mobile": return "📱";
-              case "cloud": return "☁️";
-              case "devops": return "🔧";
-              case "databases": return "🗄️";
-              default: return "💻";
-            }
-          };
-          
           return (
             <TechCard
               key={index}
               tech={tech}
               isFeatured={isFeatured}
-              getCategoryEmoji={getCategoryEmoji}
             />
           );
         })}

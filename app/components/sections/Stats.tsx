@@ -86,11 +86,12 @@ function AnimatedCounter({
 
 export function Stats() {
   const t = useTranslation();
+  const statGlyphs = ["PR", "CL", "YR", "TK"];
 
   return (
     <Section variant="dark" id="estadisticas">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+        <h2 className="sinblix-section-title text-white mb-4">
           {t.stats.title}
         </h2>
       </div>
@@ -99,9 +100,11 @@ export function Stats() {
         {t.stats.items.map((stat, index) => (
           <div
             key={index}
-            className="text-center bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-orange-500 transition-all duration-300"
+            className="text-center rounded-2xl p-8 border border-slate-700 bg-slate-900/80 hover:border-orange-400 transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="text-5xl mb-4">{stat.icon}</div>
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-orange-400/15 text-xs font-bold tracking-widest text-orange-300">
+              {statGlyphs[index] ?? "SB"}
+            </div>
             <div className="text-5xl md:text-6xl font-bold text-orange-400 mb-2">
               <AnimatedCounter value={stat.value} />
             </div>

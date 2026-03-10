@@ -27,10 +27,10 @@ export function FAQ() {
   return (
     <Section variant="light" id="faq">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <h2 className="sinblix-section-title text-gray-900 mb-4">
           {t.faq.title}
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="sinblix-section-subtitle max-w-2xl mx-auto">
           {t.faq.subtitle}
         </p>
       </div>
@@ -74,7 +74,7 @@ export function FAQ() {
           return (
             <div
               key={index}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden transition-all duration-300"
+              className="sinblix-card overflow-hidden transition-all duration-300"
             >
               <button
                 onClick={() => setOpenIndex(isOpen ? null : globalIndex)}

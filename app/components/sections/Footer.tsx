@@ -21,17 +21,17 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-slate-950 text-white py-14 border-t border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <Logo variant="white" size="sm" />
-            <p className="mt-4 text-gray-400">
+            <p className="mt-4 text-gray-300/90 leading-relaxed">
               {t.footer.tagline}
             </p>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">
+            <h3 className="font-semibold mb-4 tracking-wide">
               {t.language === "en" ? "Links" : "Enlaces"}
             </h3>
             <ul className="space-y-2">
@@ -39,7 +39,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-orange-400 transition-colors"
+                    className="text-gray-300/80 hover:text-orange-300 transition-colors"
                   >
                     {link.label}
                   </a>
@@ -48,7 +48,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">{t.footer.follow}</h3>
+            <h3 className="font-semibold mb-4 tracking-wide">{t.footer.follow}</h3>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <a
@@ -56,7 +56,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                  className="text-gray-300/80 hover:text-orange-300 transition-colors"
                   aria-label={social.name}
                 >
                   {social.icon === "instagram" && (
@@ -82,7 +82,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <div className="border-t border-white/10 pt-8 text-center text-gray-300/75">
           <p>
             &copy; {currentYear} SINBLIX.{" "}
             {t.language === "en" ? "All rights reserved." : "Todos los derechos reservados."}

@@ -63,7 +63,7 @@ export const en = {
     },
   },
   hero: {
-    title: "SINBLIX: We build software that transforms businesses",
+    title: "We build software that transforms businesses",
     subtitle:
       "Software factory in Venezuela. Custom development, cloud solutions, artificial intelligence and technology consulting for startups and companies in Barquisimeto, Caracas and throughout Latin America",
     cta: "Request a consultation",
@@ -335,12 +335,6 @@ export const en = {
     title: "Our Team",
     subtitle: "Experts passionate about technology",
     items: [
-      {
-        name: "Roberto Silva",
-        role: "CTO",
-        bio: "Software architect and technical leader with over 10 years of experience in enterprise solution development and high-growth startups.",
-        image: "https://i.pravatar.cc/400?img=15",
-      },
       {
         name: "Stefany Torrellas",
         role: "CEO, Product Manager & Automation",

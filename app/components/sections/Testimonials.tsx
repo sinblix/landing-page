@@ -24,10 +24,10 @@ export function Testimonials() {
   return (
     <Section variant="light" id="testimonios">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <h2 className="sinblix-section-title text-gray-900 mb-4">
           {t.testimonials.title}
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="sinblix-section-subtitle max-w-2xl mx-auto">
           {t.testimonials.subtitle}
         </p>
       </div>
@@ -37,7 +37,7 @@ export function Testimonials() {
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <div className="bg-white rounded-2xl border border-gray-200 p-8 md:p-12 shadow-lg">
+        <div className="sinblix-card p-8 md:p-12">
           <div className="flex items-start gap-6">
             <div className="flex-shrink-0">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
