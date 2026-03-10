@@ -343,12 +343,6 @@ export const en = {
         linkedin: "https://www.linkedin.com/in/stefany-torrellas-678b11218/",
       },
       {
-        name: "Carlos Mendoza",
-        role: "Senior Full Stack Developer",
-        bio: "Senior developer specialized in scalable architectures and cloud solutions with over 8 years of experience.",
-        image: "https://i.pravatar.cc/400?img=12",
-      },
-      {
         name: "María González",
         role: "Full Stack Developer",
         bio: "Full stack developer with expertise in React, Node.js and databases, passionate about creating innovative solutions.",
