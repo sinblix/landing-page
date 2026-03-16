@@ -153,6 +153,7 @@ export const es = {
       { label: "Proceso", href: "#proceso" },
       { label: "Contacto", href: "#contacto" },
       { label: "Política de Privacidad", href: "/politica-privacidad" },
+      { label: "Términos de Servicio", href: "/terminos-de-servicio" },
     ],
     follow: "Síguenos",
   },
