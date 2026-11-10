@@ -1,360 +1,119 @@
+// Spanish is the default language: the server renders it and the metadata uses it.
+// en.ts mirrors this shape (Translation) for the client-side ES/EN toggle.
+// Headings with an italic tail are split in two: `lead` (upright) and `em` (italic, orange).
 export const es = {
   metadata: {
-    title: "SINBLIX - Fábrica de Software | Desarrollo a Medida",
+    title: "Sinblix | Sistema POS y bot de WhatsApp con IA para negocios",
     description:
-      "SINBLIX es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, e inteligencia artificial. Servimos a empresas en Barquisimeto, Caracas y toda Latinoamérica. Transformamos ideas en software que impulsa tu negocio.",
-    keywords: [
-      // Servicios principales
-      "desarrollo de software",
-      "fábrica de software",
-      "software a medida",
-      "desarrollo de software a medida",
-      "inteligencia artificial",
-      "IA",
-      "machine learning",
-      "automatización de procesos",
-      "automatización empresarial",
-      "n8n",
-      "desarrollo web",
-      "desarrollo móvil",
-      "aplicaciones web",
-      "aplicaciones móviles",
-      "soluciones cloud",
-      "DevOps",
-      "infraestructura cloud",
-      "consultoría tecnológica",
-      "transformación digital",
-      // Geográfico
-      "desarrollo de software Venezuela",
-      "desarrollo de software Barquisimeto",
-      "desarrollo de software Caracas",
-      "desarrollo de software Latinoamérica",
-      "empresa de software Venezuela",
-      "desarrollo web Venezuela",
-      "desarrollo móvil Venezuela",
-      "software Barquisimeto",
-      "desarrollo web Barquisimeto",
-      // Marca
-      "SINBLIX",
-    ],
-    openGraph: {
-      title: "SINBLIX - Fábrica de Software en Venezuela | Desarrollo a Medida",
-      description:
-        "SINBLIX es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud, DevOps e inteligencia artificial. Servimos empresas en Barquisimeto, Caracas y toda Latinoamérica.",
-      url: "https://www.sinblix.com",
-      siteName: "SINBLIX",
-      images: [
-        {
-          url: "https://www.sinblix.com/logos/mango.svg",
-          width: 1200,
-          height: 630,
-          alt: "SINBLIX - Fábrica de Software en Venezuela",
-        },
-      ],
-      locale: "es_VE",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "SINBLIX - Fábrica de Software en Venezuela | Desarrollo a Medida",
-      description:
-        "SINBLIX es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud, DevOps e inteligencia artificial.",
-      images: ["https://www.sinblix.com/logos/mango.svg"],
-    },
-  },
-  hero: {
-    title: "Construimos software que transforma negocios",
-    subtitle:
-      "Fábrica de software en Venezuela. Desarrollo a medida, soluciones cloud, inteligencia artificial y consultoría tecnológica para startups y empresas en Barquisimeto, Caracas y toda Latinoamérica",
-    cta: "Solicita una consulta",
-  },
-  services: {
-    title: "Nuestros Servicios",
-    subtitle: "Soluciones tecnológicas completas para impulsar tu negocio",
-    items: [
-      {
-        title: "Inteligencia Artificial",
-        description:
-          "Soluciones de IA y machine learning para automatizar procesos, análisis predictivo y toma de decisiones inteligentes",
-        icon: "🤖",
-      },
-      {
-        title: "Automatización de Procesos",
-        description:
-          "Automatización de flujos de trabajo y procesos empresariales con n8n y otras herramientas para aumentar eficiencia y reducir errores",
-        icon: "⚡",
-      },
-      {
-        title: "Desarrollo de Software a Medida",
-        description:
-          "Soluciones personalizadas adaptadas a las necesidades específicas de tu negocio",
-        icon: "💻",
-      },
-      {
-        title: "Desarrollo Web y Móvil",
-        description:
-          "Aplicaciones web y móviles modernas, escalables y de alto rendimiento",
-        icon: "📱",
-      },
-      {
-        title: "Soluciones Cloud y DevOps",
-        description:
-          "Infraestructura en la nube, automatización y despliegue continuo",
-        icon: "☁️",
-      },
-      {
-        title: "Consultoría Tecnológica",
-        description:
-          "Asesoría estratégica para optimizar procesos y adoptar tecnologías innovadoras",
-        icon: "🎯",
-      },
-    ],
-  },
-  process: {
-    title: "Nuestro Proceso de Trabajo",
-    subtitle: "Metodología ágil probada para entregar resultados exitosos",
-    steps: [
-      {
-        title: "Consulta inicial",
-        description:
-          "Analizamos tus necesidades y objetivos para entender el alcance del proyecto",
-      },
-      {
-        title: "Diseño y planificación",
-        description:
-          "Creamos la arquitectura y plan de trabajo detallado con metodología ágil",
-      },
-      {
-        title: "Desarrollo ágil",
-        description:
-          "Desarrollamos iterativamente con entregas continuas y feedback constante",
-      },
-      {
-        title: "Testing y QA",
-        description:
-          "Garantizamos calidad con pruebas exhaustivas y revisión de código",
-      },
-      {
-        title: "Lanzamiento y soporte",
-        description:
-          "Desplegamos tu solución y brindamos soporte continuo para su evolución",
-      },
-    ],
-  },
-  cta: {
-    title: "¿Listo para transformar tu negocio?",
-    subtitle: "Hablemos sobre tu proyecto y cómo podemos ayudarte",
-    button: "Contactar ahora",
-  },
-  footer: {
-    tagline: "Fábrica de software en Venezuela que transforma negocios",
-    links: [
-      { label: "Servicios", href: "#servicios" },
-      { label: "Proceso", href: "#proceso" },
-      { label: "Contacto", href: "#contacto" },
-      { label: "Política de Privacidad", href: "/politica-privacidad" },
-      { label: "Términos de Servicio", href: "/terminos-de-servicio" },
-    ],
-    follow: "Síguenos",
+      "Ventas e inventario en dólares y bolívares con tasa BCV, aun sin internet, y una asistente con IA que responde tu WhatsApp 24/7. Prueba gratis 30 días.",
   },
   nav: {
-    links: [
-      { label: "Servicios", href: "#servicios" },
-      { label: "Proceso", href: "#proceso" },
-      { label: "Contacto", href: "#contacto" },
-    ],
+    label: "Principal",
+    skip: "Saltar al contenido",
+    menu: "Menú",
+    pos: "Sinblix POS",
+    aria: "Aria",
+    desarrollo: "Desarrollo",
+    preguntas: "Preguntas",
+    cta: "Prueba gratis 30 días",
+    langShort: "EN",
+    langLabel: "Ver la página en inglés",
+    home: "Sinblix, inicio",
   },
-  technologies: {
-    title: "Tecnologías que Dominamos",
-    subtitle: "Stack tecnológico moderno para construir soluciones de clase mundial",
-    categories: {
-      frontend: "Frontend",
-      backend: "Backend",
-      mobile: "Mobile",
-      cloud: "Cloud",
-      devops: "DevOps",
-      databases: "Bases de Datos",
+  hero: {
+    eyebrow: "Venezuela y Colombia · ventas + WhatsApp",
+    title: { lead: "La caja cuadrada y el WhatsApp respondido, ", em: "aunque tú no estés." },
+    lead: "Sinblix POS lleva tus ventas, inventario y fiados en dólares y bolívares con la tasa BCV del día. Aria, nuestra asistente con IA, contesta el WhatsApp de tu negocio las 24 horas.",
+    trial: "Prueba Sinblix POS gratis 30 días",
+    aria: "Habla con Aria por WhatsApp",
+    note: "Planes desde $10 al mes. Trabajamos en línea en toda Venezuela y Colombia.",
+    canvasLabel:
+      "Gotas líquidas oscuras en 3D con reflejos naranja y ámbar que giran, se funden y siguen al cursor",
+    chips: {
+      offline: "Venta guardada sin internet",
+      rate: "Tasa BCV de hoy",
+      replied: "Aria respondió · 11:04 p. m.",
     },
-    items: [
-      { name: "React", category: "frontend", featured: true },
-      { name: "Next.js", category: "frontend", featured: true },
-      { name: "TypeScript", category: "frontend", featured: true },
-      { name: "Vue.js", category: "frontend", featured: true },
-      { name: "Node.js", category: "backend", featured: true },
-      { name: "Python", category: "backend", featured: true },
-      { name: "Go", category: "backend" },
-      { name: "React Native", category: "mobile", featured: true },
-      { name: "PWA", category: "mobile", featured: true },
-      { name: "iOS", category: "mobile" },
-      { name: "Android", category: "mobile" },
-      { name: "AWS", category: "cloud", featured: true },
-      { name: "Azure", category: "cloud" },
-      { name: "Google Cloud", category: "cloud" },
-      { name: "Docker", category: "devops", featured: true },
-      { name: "Kubernetes", category: "devops", featured: true },
-      { name: "CI/CD", category: "devops", featured: true },
-      { name: "PostgreSQL", category: "databases", featured: true },
-      { name: "MongoDB", category: "databases", featured: true },
-      { name: "DynamoDB", category: "databases", featured: true },
-      { name: "MySQL", category: "databases", featured: true },
-      { name: "Redis", category: "databases", featured: true },
+  },
+  marquee: {
+    label: "Lo que hace Sinblix",
+    big: ["Tasa BCV automática", "Ventas sin internet", "Fiados por WhatsApp", "Aria 24 horas", "Dólares, bolívares y pesos"],
+    small: [
+      "CAJA",
+      "INVENTARIO",
+      "CLIENTES",
+      "FIADOS",
+      "REPORTES",
+      "WHATSAPP",
+      "COMPUTADORA · TABLET · TELÉFONO",
+      "VENEZUELA",
+      "COLOMBIA",
     ],
   },
-  portfolio: {
-    title: "Casos de Éxito",
-    subtitle: "Proyectos que han transformado negocios",
-    items: [
+  pos: {
+    eyebrow: "Sinblix POS",
+    title: { lead: "Ventas e inventario que siguen funcionando ", em: "cuando se cae el internet." },
+    body: "Vende en dólares, bolívares o euros con la tasa BCV que se actualiza sola. Si se va la conexión, la venta se guarda y se sube cuando vuelve. Controlas caja, inventario, clientes y fiados, y le recuerdas el saldo al cliente con un mensaje de WhatsApp ya escrito. Funciona en computadora, tablet y teléfono.",
+    features: ["Caja", "Inventario", "Clientes", "Fiados", "Reportes"],
+    price: "Desde $10",
+    perMonth: "al mes",
+    cta: "Crear mi cuenta gratis",
+  },
+  aria: {
+    eyebrow: "Aria · asistente con IA",
+    title: { lead: "Tu WhatsApp contesta a las ", em: "11 de la noche." },
+    body: "Aria responde a tus clientes con tus precios, horarios, servicios y ubicación. Cuando tú escribes en un chat, ella se hace a un lado con ese cliente.",
+    cta: "Escríbele a Aria y pruébala",
+  },
+  venderAqui: {
+    title: "Hecho para vender aquí",
+    cards: [
+      { mark: "Bs", body: "La tasa BCV se actualiza sola cada día." },
+      { mark: "$ · COP", body: "Pagas en bolívares a la tasa del día, o en pesos si estás en Colombia." },
       {
-        title: "Software para el Estado Colombiano",
-        description: "Sistema gubernamental de gran escala con millones de usuarios diarios, procesando transacciones críticas y servicios públicos",
-        technologies: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
-        image: "/portfolio/government.jpg",
-      },
-      {
-        title: "E-commerce a Gran Escala",
-        description: "Plataforma de comercio electrónico masiva con millones de productos, procesamiento de pagos avanzado y logística optimizada",
-        technologies: ["React", "Node.js", "MongoDB", "AWS", "Redis"],
-        image: "/portfolio/ecommerce.jpg",
-      },
-      {
-        title: "Sistemas Omnicanales",
-        description: "Solución integrada que unifica canales físicos y digitales para una experiencia de cliente consistente en todos los puntos de contacto",
-        technologies: ["Next.js", "Python", "PostgreSQL", "AWS"],
-        image: "/portfolio/omnichannel.jpg",
-      },
-      {
-        title: "Agentes de Ventas con IA",
-        description: "Sistema inteligente de agentes virtuales con IA que automatiza ventas, atención al cliente y genera leads cualificados 24/7",
-        technologies: ["Python", "Node.js", "AWS", "OpenAI"],
-        image: "/portfolio/ai-sales.jpg",
-      },
-      {
-        title: "Automatización de Procesos Financieros",
-        description: "Sistema automatizado para procesamiento de facturas, pagos y reconciliación contable, reduciendo tiempo de procesamiento en 80%",
-        technologies: ["n8n", "Python", "PostgreSQL", "AWS"],
-        image: "/portfolio/automation-finance.jpg",
-      },
-      {
-        title: "Automatización de Flujos de Trabajo",
-        description: "Plataforma de automatización empresarial que conecta sistemas, sincroniza datos y optimiza procesos operativos",
-        technologies: ["n8n", "Node.js", "MongoDB", "Docker"],
-        image: "/portfolio/automation-workflow.jpg",
+        mark: "24 h",
+        body: "Te atienden personas de lunes a viernes, de 8 a. m. a 6 p. m., y Aria a cualquier hora.",
       },
     ],
   },
-  stats: {
-    title: "Números que Hablan",
-    items: [
-      { value: "50+", label: "Proyectos Completados", icon: "🚀" },
-      { value: "30+", label: "Clientes Satisfechos", icon: "😊" },
-      { value: "10+", label: "Años de Experiencia", icon: "⭐" },
-      { value: "15+", label: "Tecnologías Dominadas", icon: "💻" },
-    ],
-  },
-  testimonials: {
-    title: "Lo que Dicen Nuestros Clientes",
-    subtitle: "Testimonios reales de empresas que confiaron en nosotros",
-    items: [
-      {
-        name: "María González",
-        company: "TechStart",
-        role: "CEO",
-        testimonial:
-          "SINBLIX transformó completamente nuestra plataforma. El equipo es profesional, eficiente y siempre entrega a tiempo.",
-        rating: 5,
-        image: "/testimonials/client1.jpg",
-      },
-      {
-        name: "Carlos Rodríguez",
-        company: "InnovateCorp",
-        role: "CTO",
-        testimonial:
-          "La mejor decisión que tomamos fue trabajar con SINBLIX. Su expertise técnico y atención al detalle es excepcional.",
-        rating: 5,
-        image: "/testimonials/client2.jpg",
-      },
-      {
-        name: "Ana Martínez",
-        company: "Digital Solutions",
-        role: "Directora de Producto",
-        testimonial:
-          "Proyecto entregado con excelente calidad. El equipo entendió perfectamente nuestras necesidades y las superó.",
-        rating: 5,
-        image: "/testimonials/client3.jpg",
-      },
-    ],
+  desarrollo: {
+    title: "Desarrollo a la medida",
+    line: "Un sistema o una página web hecha para cómo trabaja tu negocio.",
+    heading: { lead: "Un sistema o una página web hecha para ", em: "cómo trabaja tu negocio." },
+    body: "Cuéntanos en dos líneas qué necesitas y un asesor te envía la cotización.",
+    cta: "Pedir cotización por WhatsApp",
   },
   faq: {
-    title: "Preguntas Frecuentes",
-    subtitle: "Resolvemos tus dudas más comunes",
-    categories: {
-      services: "Servicios",
-      process: "Proceso",
-      pricing: "Precios",
-      support: "Soporte",
-    },
+    title: "Preguntas frecuentes",
     items: [
       {
-        category: "services",
-        question: "¿Qué servicios ofrecen?",
-        answer:
-          "Ofrecemos desarrollo de software a medida, desarrollo web y móvil, soluciones cloud y DevOps, y consultoría tecnológica. Trabajamos con startups y empresas de todos los tamaños.",
+        q: "¿Funciona sin internet?",
+        a: "Sí. La venta se guarda en el equipo y se sincroniza al volver la conexión.",
       },
       {
-        category: "services",
-        question: "¿Qué tecnologías utilizan?",
-        answer:
-          "Trabajamos con tecnologías modernas como React, Next.js, Node.js, Python, React Native, Flutter, AWS, Azure, Docker, Kubernetes y más. Adaptamos el stack tecnológico según las necesidades de cada proyecto.",
+        q: "¿Tengo que instalar algo?",
+        a: "No. Entras desde el navegador de tu computadora, tablet o teléfono.",
       },
       {
-        category: "process",
-        question: "¿Cuál es su proceso de trabajo?",
-        answer:
-          "Seguimos una metodología ágil que incluye consulta inicial, diseño y planificación, desarrollo iterativo, testing exhaustivo, y lanzamiento con soporte continuo. Mantenemos comunicación constante durante todo el proceso.",
+        q: "¿Puedo contestar yo un chat?",
+        a: "Sí. Cuando respondes tú, Aria deja de escribirle a ese cliente.",
       },
       {
-        category: "process",
-        question: "¿Cuánto tiempo toma desarrollar un proyecto?",
-        answer:
-          "El tiempo varía según la complejidad y alcance del proyecto. Proyectos pequeños pueden tomar 2-4 semanas, mientras que proyectos más complejos pueden requerir 3-6 meses o más. Proporcionamos estimaciones detalladas después de la consulta inicial.",
-      },
-      {
-        category: "pricing",
-        question: "¿Cómo se estructura el precio?",
-        answer:
-          "Nuestros precios se basan en el alcance, complejidad y tiempo estimado del proyecto. Ofrecemos modelos de pago flexibles: por proyecto, por hora, o por sprint. Proporcionamos cotizaciones transparentes sin costos ocultos.",
-      },
-      {
-        category: "support",
-        question: "¿Ofrecen soporte después del lanzamiento?",
-        answer:
-          "Sí, ofrecemos planes de soporte continuo que incluyen mantenimiento, actualizaciones, corrección de bugs y mejoras. También proporcionamos documentación completa y capacitación para tu equipo.",
+        q: "¿Cómo pago?",
+        a: "En dólares, en bolívares a la tasa BCV del día, o en pesos en Colombia.",
       },
     ],
   },
-  team: {
-    title: "Nuestro Equipo",
-    subtitle: "Expertos apasionados por la tecnología",
-    items: [
-      {
-        name: "Stefany Torrellas",
-        role: "CEO, Product Manager & Automatizaciones",
-        bio: "Estratega de productos y experta en automatización de procesos empresariales con visión para transformar negocios.",
-        image: "/team/stefany.jpg",
-        linkedin: "https://www.linkedin.com/in/stefany-torrellas-678b11218/",
-      },
-      {
-        name: "María González",
-        role: "Full Stack Developer",
-        bio: "Desarrolladora full stack con expertise en React, Node.js y bases de datos, apasionada por crear soluciones innovadoras.",
-        image: "https://i.pravatar.cc/400?img=32",
-      },
-      {
-        name: "Juan Pérez",
-        role: "Junior Developer",
-        bio: "Desarrollador junior en crecimiento, especializándose en tecnologías modernas y mejores prácticas de desarrollo.",
-        image: "https://i.pravatar.cc/400?img=18",
-      },
-    ],
+  close: {
+    title: { lead: "Prueba Sinblix POS ", em: "30 días gratis." },
+    trial: "Crear mi cuenta gratis",
+    aria: "Habla con Aria",
   },
-} as const;
+  footer: {
+    privacy: "Política de privacidad",
+    terms: "Términos de servicio",
+    instagram: "Instagram",
+  },
+};
+
+export type Translation = typeof es;

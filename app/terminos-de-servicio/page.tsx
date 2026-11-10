@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { SiteNav } from "../components/home/SiteNav";
+import { SiteFooter } from "../components/home/SiteFooter";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
 const pageUrl = `${baseUrl}/terminos-de-servicio`;
@@ -17,44 +19,36 @@ export const metadata: Metadata = {
     url: pageUrl,
     siteName: "SINBLIX",
     type: "article",
-    images: [
-      {
-        url: `${baseUrl}/logos/mango.svg`,
-        width: 1200,
-        height: 630,
-        alt: "SINBLIX",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Términos de Servicio | SINBLIX",
     description:
       "Lee los términos y condiciones que rigen el uso de los servicios y plataformas de SINBLIX.",
-    images: [`${baseUrl}/logos/mango.svg`],
   },
 };
 
 export default function TerminosDeServicioPage() {
   return (
-    <main className="bg-white text-gray-900">
-      <section className="container mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+    <>
+      <SiteNav onHome={false} />
+      <main id="main" className="legal">
+      <div className="wrap"><div className="legal__body">
+        <h1>
           Términos de Servicio
         </h1>
-        <p className="mt-4 text-gray-600">
+        <p>
           Fecha de entrada en vigencia: 16 de marzo de 2026
         </p>
 
-        <div className="mt-10 space-y-8 leading-7">
+        <div>
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               1. Aceptación de los términos
             </h2>
-            <p className="mt-2">
+            <p>
               Al acceder o utilizar el sitio web{" "}
               <a
-                className="text-orange-600 hover:text-orange-700"
                 href="https://www.sinblix.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -69,13 +63,13 @@ export default function TerminosDeServicioPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               2. Descripción de los servicios
             </h2>
-            <p className="mt-2">
+            <p>
               SINBLIX es una empresa de tecnología especializada en:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pl-6">
+            <ul>
               <li>
                 <strong>Automatización de procesos:</strong> diseño e
                 implementación de flujos de trabajo automatizados con
@@ -97,7 +91,7 @@ export default function TerminosDeServicioPage() {
                 negocios.
               </li>
             </ul>
-            <p className="mt-3">
+            <p>
               Los servicios específicos, alcances y condiciones de entrega se
               detallan en propuestas comerciales o contratos individuales
               firmados entre SINBLIX y el cliente.
@@ -105,13 +99,13 @@ export default function TerminosDeServicioPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               3. Uso aceptable del sitio web
             </h2>
-            <p className="mt-2">
+            <p>
               Al utilizar nuestro sitio web, te comprometes a:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pl-6">
+            <ul>
               <li>
                 No realizar ninguna actividad ilegal, fraudulenta o que viole
                 los derechos de terceros.
@@ -129,29 +123,29 @@ export default function TerminosDeServicioPage() {
                 derechos de autor sin autorización expresa.
               </li>
             </ul>
-            <p className="mt-3">
+            <p>
               SINBLIX se reserva el derecho de bloquear o restringir el acceso
               a cualquier usuario que incumpla estas condiciones.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               4. Propiedad intelectual
             </h2>
-            <p className="mt-2">
+            <p>
               Todo el contenido publicado en este sitio web —incluyendo textos,
               imágenes, logotipos, código, diseños y materiales multimedia— es
               propiedad exclusiva de SINBLIX o de sus respectivos titulares, y
               está protegido por las leyes de propiedad intelectual aplicables.
             </p>
-            <p className="mt-3">
+            <p>
               Queda prohibida la reproducción total o parcial de cualquier
               contenido sin el consentimiento previo y por escrito de SINBLIX.
               El acceso al sitio no otorga ninguna licencia ni derecho sobre
               dichos contenidos.
             </p>
-            <p className="mt-3">
+            <p>
               El software, flujos de automatización y desarrollos creados por
               SINBLIX para sus clientes se rigen por los términos de propiedad
               intelectual acordados en el contrato de servicio correspondiente.
@@ -159,19 +153,18 @@ export default function TerminosDeServicioPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               5. Confidencialidad y protección de datos
             </h2>
-            <p className="mt-2">
+            <p>
               SINBLIX se compromete a tratar con la máxima confidencialidad toda
               la información que los clientes compartan en el marco de la
               prestación de servicios. Esta información no será divulgada a
               terceros sin el consentimiento del cliente, salvo obligación legal.
             </p>
-            <p className="mt-3">
+            <p>
               El tratamiento de datos personales se rige por nuestra{" "}
               <a
-                className="text-orange-600 hover:text-orange-700"
                 href="/politica-privacidad"
               >
                 Política de Privacidad
@@ -181,19 +174,19 @@ export default function TerminosDeServicioPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               6. Limitación de responsabilidad
             </h2>
-            <p className="mt-2">
+            <p>
               SINBLIX pone el máximo esfuerzo en la calidad y disponibilidad de
               sus servicios, pero no garantiza que el sitio web esté libre de
               errores o interrupciones en todo momento.
             </p>
-            <p className="mt-3">
+            <p>
               En la máxima medida permitida por la ley, SINBLIX no será
               responsable por:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pl-6">
+            <ul>
               <li>
                 Daños directos, indirectos o consecuentes derivados del uso o
                 imposibilidad de uso del sitio web.
@@ -211,40 +204,40 @@ export default function TerminosDeServicioPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               7. Contratación de servicios
             </h2>
-            <p className="mt-2">
+            <p>
               Los servicios de SINBLIX se contratan mediante acuerdo comercial
               formalizado entre las partes. El inicio de cualquier proyecto
               requiere la aprobación de una propuesta y, cuando corresponda, la
               firma de un contrato de servicios que establece:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pl-6">
+            <ul>
               <li>Alcance y entregables del proyecto.</li>
               <li>Plazos y cronograma de entrega.</li>
               <li>Condiciones de pago.</li>
               <li>Propiedad intelectual sobre los desarrollos.</li>
               <li>Cláusulas de soporte y mantenimiento post-entrega.</li>
             </ul>
-            <p className="mt-3">
+            <p>
               La información publicada en este sitio web tiene carácter
               informativo y no constituye una oferta vinculante.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               8. Tarifas y pagos
             </h2>
-            <p className="mt-2">
+            <p>
               Las tarifas por los servicios de SINBLIX se acuerdan de forma
               individualizada en cada propuesta comercial. SINBLIX podrá
               actualizar sus precios en cualquier momento; no obstante, los
               proyectos ya contratados se regirán por las condiciones
               económicas pactadas en el contrato vigente.
             </p>
-            <p className="mt-3">
+            <p>
               Los pagos deben realizarse en los plazos y condiciones establecidos
               en cada contrato. El incumplimiento de pagos podrá derivar en la
               suspensión del servicio o la terminación del contrato.
@@ -252,10 +245,10 @@ export default function TerminosDeServicioPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               9. Modificaciones de los términos
             </h2>
-            <p className="mt-2">
+            <p>
               SINBLIX se reserva el derecho de actualizar estos Términos de
               Servicio en cualquier momento para reflejar cambios en la
               legislación aplicable, en la oferta de servicios o en las prácticas
@@ -268,10 +261,10 @@ export default function TerminosDeServicioPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               10. Ley aplicable y resolución de disputas
             </h2>
-            <p className="mt-2">
+            <p>
               Estos Términos de Servicio se rigen por la legislación vigente en
               la jurisdicción aplicable al domicilio de SINBLIX. Cualquier
               controversia derivada del uso de los servicios o de la
@@ -283,13 +276,12 @@ export default function TerminosDeServicioPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">11. Contacto</h2>
-            <p className="mt-2">
+            <h2>11. Contacto</h2>
+            <p>
               Si tienes alguna pregunta sobre estos Términos de Servicio o deseas
               solicitar información adicional, puedes contactarnos por WhatsApp
               en{" "}
               <a
-                className="text-orange-600 hover:text-orange-700"
                 href="https://wa.me/584121785954"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -301,7 +293,9 @@ export default function TerminosDeServicioPage() {
             </p>
           </section>
         </div>
-      </section>
-    </main>
+      </div></div>
+      </main>
+      <SiteFooter />
+    </>
   );
 }

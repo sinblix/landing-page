@@ -1,154 +1,149 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { es } from "./i18n/translations/es";
-import { en } from "./i18n/translations/en";
 import { LanguageProviderWrapper } from "./components/LanguageProviderWrapper";
-import { cookies } from "next/headers";
-import { isValidLanguage } from "./i18n/config";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// "Noche en movimiento": Instrument Serif for display (upright and italic), Geist for text,
+// Geist Mono for labels. Exposed as CSS variables and read in globals.css.
+const serif = Instrument_Serif({
+  weight: "400",
+  style: ["normal", "italic"],
   subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
+const sans = Geist({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
+
+// Static on purpose: no cookies() or headers() here, so the home is prerendered (○). Spanish is
+// the server language; the ES/EN toggle is client-side (LanguageProvider).
+export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
+  title: es.metadata.title,
+  description: es.metadata.description,
+  icons: { icon: "/logos/mango.svg" },
+  alternates: { canonical: baseUrl },
+  openGraph: {
+    title: es.metadata.title,
+    description: es.metadata.description,
+    url: baseUrl,
+    siteName: "Sinblix",
+    locale: "es_VE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: es.metadata.title,
+    description: es.metadata.description,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "SINBLIX",
+  url: baseUrl,
+  logo: `${baseUrl}/logos/logo.svg`,
+  description: es.metadata.description,
+  sameAs: ["https://www.instagram.com/sinblix.ven/"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+58-412-178-5954",
+    contactType: "customer service",
+    areaServed: ["VE", "CO"],
+    availableLanguage: ["Spanish", "English"],
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Sinblix",
+  url: baseUrl,
+  inLanguage: "es",
+  publisher: { "@type": "Organization", name: "SINBLIX" },
+};
+
+const plan = (name: string, price: string) => ({
+  "@type": "Offer",
+  name,
+  price,
+  priceCurrency: "USD",
+  priceSpecification: {
+    "@type": "UnitPriceSpecification",
+    price,
+    priceCurrency: "USD",
+    unitText: "MONTH",
+    billingDuration: "P1M",
+  },
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const posSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Sinblix POS",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://pos.sinblix.com/register",
+  description: es.pos.body,
+  offers: [plan("Starter", "10"), plan("Business", "25"), plan("Pro", "50")],
+  publisher: { "@type": "Organization", name: "SINBLIX" },
+};
 
-async function getLanguageFromCookies(): Promise<"es" | "en"> {
-  try {
-    const cookieStore = await cookies();
-    const langCookie = cookieStore.get("language");
-    if (langCookie && isValidLanguage(langCookie.value)) {
-      return langCookie.value;
-    }
-  } catch {
-    // Si no hay cookies disponibles, usar default
-  }
-  return "es"; // Default
-}
+const areaServed = [
+  { "@type": "Country", name: "Venezuela" },
+  { "@type": "Country", name: "Colombia" },
+];
 
-export async function generateMetadata(): Promise<Metadata> {
-  const lang = await getLanguageFromCookies();
-  const t = lang === "en" ? en : es;
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
+const ariaSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Aria",
+  serviceType: "Asistente con IA para WhatsApp",
+  description: es.aria.body,
+  provider: { "@type": "Organization", name: "SINBLIX", url: baseUrl },
+  areaServed,
+};
 
-  return {
-    title: t.metadata.title,
-    description: t.metadata.description,
-    keywords: [...t.metadata.keywords],
-    icons: {
-      icon: "/logos/mango.svg",
-    },
-    openGraph: {
-      title: t.metadata.openGraph.title,
-      description: t.metadata.openGraph.description,
-      url: t.metadata.openGraph.url,
-      siteName: t.metadata.openGraph.siteName,
-      images: t.metadata.openGraph.images.map((img) => ({
-        url: img.url.startsWith("http") ? img.url : `${baseUrl}${img.url}`,
-        width: img.width,
-        height: img.height,
-        alt: img.alt,
-      })),
-      locale: t.metadata.openGraph.locale,
-      type: t.metadata.openGraph.type,
-    },
-    twitter: {
-      card: t.metadata.twitter.card,
-      title: t.metadata.twitter.title,
-      description: t.metadata.twitter.description,
-      images: t.metadata.twitter.images.map((img) =>
-        img.startsWith("http") ? img : `${baseUrl}${img}`
-      ),
-    },
-    alternates: {
-      canonical: baseUrl,
-    },
-    metadataBase: new URL(baseUrl),
-  };
-}
+const desarrolloSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: es.desarrollo.title,
+  serviceType: "Desarrollo de software y páginas web a la medida",
+  description: es.desarrollo.line,
+  provider: { "@type": "Organization", name: "SINBLIX", url: baseUrl },
+  areaServed,
+};
 
-export default async function RootLayout({
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: es.faq.items.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
+const schemas = [organizationSchema, websiteSchema, posSchema, ariaSchema, desarrolloSchema, faqSchema];
+
+
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const lang = await getLanguageFromCookies();
-  const t = lang === "en" ? en : es;
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
-
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "SINBLIX",
-    url: baseUrl,
-    logo: `${baseUrl}/logos/mango.svg`,
-    description: t.metadata.description,
-    sameAs: [
-      "https://www.instagram.com/sinblix.ven/",
-      "https://wa.me/584121785954",
-    ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+58-412-178-5954",
-      contactType: "customer service",
-      availableLanguage: ["Spanish", "English"],
-    },
-  };
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "SINBLIX",
-    description: t.metadata.description,
-    url: baseUrl,
-    telephone: "+58-412-178-5954",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "VE",
-      addressRegion: "Lara",
-      addressLocality: "Barquisimeto",
-    },
-  };
-
-  const serviceSchemas = t.services.items.map(
-    (service: { title: string; description: string }) => ({
-      "@context": "https://schema.org",
-      "@type": "Service",
-      serviceType: service.title,
-      description: service.description,
-      provider: {
-        "@type": "Organization",
-        name: "SINBLIX",
-      },
-      areaServed: {
-        "@type": "Country",
-        name: "Venezuela",
-      },
-    })
-  );
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "SINBLIX",
-    url: baseUrl,
-    description: t.metadata.description,
-    inLanguage: lang === "es" ? "es-VE" : "en-US",
-  };
-
-  const schemas = [
-    organizationSchema,
-    localBusinessSchema,
-    ...serviceSchemas,
-    websiteSchema,
-  ];
-
   return (
-    <html lang={lang}>
+    <html lang="es" className={`${serif.variable} ${sans.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         {schemas.map((schema, index) => (
           <script
@@ -186,12 +181,8 @@ export default async function RootLayout({
         </noscript>
         {/* End Meta Pixel Code */}
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <LanguageProviderWrapper initialLanguage={lang}>
-          {children}
-        </LanguageProviderWrapper>
+      <body suppressHydrationWarning>
+        <LanguageProviderWrapper initialLanguage="es">{children}</LanguageProviderWrapper>
       </body>
     </html>
   );

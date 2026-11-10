@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { SiteNav } from "../components/home/SiteNav";
+import { SiteFooter } from "../components/home/SiteFooter";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
 const pageUrl = `${baseUrl}/politica-privacidad`;
@@ -17,41 +19,34 @@ export const metadata: Metadata = {
     url: pageUrl,
     siteName: "SINBLIX",
     type: "article",
-    images: [
-      {
-        url: `${baseUrl}/logos/mango.svg`,
-        width: 1200,
-        height: 630,
-        alt: "SINBLIX",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Política de Privacidad | SINBLIX",
     description:
       "Conoce cómo SINBLIX gestiona tus datos personales y protege tu información.",
-    images: [`${baseUrl}/logos/mango.svg`],
   },
 };
 
 export default function PoliticaPrivacidadPage() {
   return (
-    <main className="bg-white text-gray-900">
-      <section className="container mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+    <>
+      <SiteNav onHome={false} />
+      <main id="main" className="legal">
+      <div className="wrap"><div className="legal__body">
+        <h1>
           Política de Privacidad
         </h1>
-        <p className="mt-4 text-gray-600">
+        <p>
           Fecha de entrada en vigencia: 10 de marzo de 2026
         </p>
 
-        <div className="mt-10 space-y-8 leading-7">
+        <div>
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               1. Introducción - SINBLIX y compromiso con la privacidad
             </h2>
-            <p className="mt-2">
+            <p>
               En SINBLIX (https://www.sinblix.com/) desarrollamos soluciones de
               automatización de procesos, software a medida y gestión de leads
               con inteligencia artificial. Esta Política de Privacidad explica
@@ -62,27 +57,27 @@ export default function PoliticaPrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               2. Datos recolectados y privacidad de datos en software
             </h2>
-            <h3 className="mt-4 text-xl font-semibold">Datos de contacto</h3>
-            <p className="mt-2">
+            <h3>Datos de contacto</h3>
+            <p>
               Cuando nos contactas, podemos recopilar nombre, correo
               electrónico, teléfono, empresa y detalles de tu solicitud para
               poder responderte y ofrecer una propuesta adecuada.
             </p>
-            <h3 className="mt-4 text-xl font-semibold">
+            <h3>
               Cookies y tecnologías de seguimiento
             </h3>
-            <p className="mt-2">
+            <p>
               Utilizamos cookies y tecnologías similares para analizar tráfico,
               mejorar funcionalidades del sitio y medir rendimiento de campañas.
               Puedes gestionar o desactivar cookies desde tu navegador.
             </p>
-            <h3 className="mt-4 text-xl font-semibold">
+            <h3>
               Redes sociales (Instagram y TikTok)
             </h3>
-            <p className="mt-2">
+            <p>
               Si interactúas con nuestros perfiles o contenidos en Instagram o
               TikTok, podríamos recibir datos públicos de interacción conforme a
               la configuración de privacidad de cada plataforma.
@@ -90,10 +85,10 @@ export default function PoliticaPrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               3. Finalidad del tratamiento para servicios de automatización e IA
             </h2>
-            <p className="mt-2">
+            <p>
               Tratamos los datos para: (a) responder solicitudes comerciales, (b)
               ofrecer y ejecutar servicios de software, automatización y
               consultoría tecnológica, (c) mejorar la experiencia de usuario y
@@ -102,10 +97,10 @@ export default function PoliticaPrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               4. Base legal, conservación y Seguridad en automatización
             </h2>
-            <p className="mt-2">
+            <p>
               La base jurídica principal es tu consentimiento, la ejecución de
               medidas precontractuales y, cuando corresponda, nuestro interés
               legítimo. Conservamos la información solo durante el tiempo
@@ -117,13 +112,13 @@ export default function PoliticaPrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               5. Derechos del usuario (ARCO)
             </h2>
-            <p className="mt-2">
+            <p>
               Puedes ejercer tus derechos ARCO:
             </p>
-            <ul className="mt-3 list-disc space-y-2 pl-6">
+            <ul>
               <li>
                 <strong>Acceso:</strong> conocer qué datos personales tratamos.
               </li>
@@ -143,10 +138,10 @@ export default function PoliticaPrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               6. Uso de cookies, terceros e integraciones seguras
             </h2>
-            <p className="mt-2">
+            <p>
               No vendemos tus datos personales. Podemos compartir información
               estrictamente necesaria con proveedores tecnológicos de hosting,
               analítica, automatización y comunicación, siempre bajo criterios
@@ -155,10 +150,10 @@ export default function PoliticaPrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">
+            <h2>
               7. SINBLIX y Privacidad de datos en software
             </h2>
-            <p className="mt-2">
+            <p>
               Trabajamos continuamente para reforzar la privacidad de datos en
               software y la seguridad en automatización en cada etapa de diseño,
               desarrollo y operación de nuestras soluciones.
@@ -166,12 +161,11 @@ export default function PoliticaPrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold">8. Contacto</h2>
-            <p className="mt-2">
+            <h2>8. Contacto</h2>
+            <p>
               Para ejercer tus derechos ARCO o realizar consultas sobre esta
               política, contáctanos por WhatsApp en{" "}
               <a
-                className="text-orange-600 hover:text-orange-700"
                 href="https://wa.me/584121785954"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -183,7 +177,9 @@ export default function PoliticaPrivacidadPage() {
             </p>
           </section>
         </div>
-      </section>
-    </main>
+      </div></div>
+      </main>
+      <SiteFooter />
+    </>
   );
 }
