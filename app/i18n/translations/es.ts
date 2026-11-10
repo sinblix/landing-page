@@ -14,6 +14,7 @@ export const es = {
     pos: "Sinblix POS",
     aria: "Aria",
     desarrollo: "Desarrollo",
+    precios: "Precios",
     preguntas: "Preguntas",
     cta: "Prueba gratis 30 días",
     langShort: "EN",
@@ -21,7 +22,8 @@ export const es = {
     home: "Sinblix, inicio",
   },
   hero: {
-    eyebrow: "Venezuela y Colombia · ventas + WhatsApp",
+    // Part of the h1 (small line above the headline), so the h1 names what is sold and where.
+    eyebrow: "Sistema POS y WhatsApp con IA · Venezuela y Colombia",
     title: { lead: "La caja cuadrada y el WhatsApp respondido, ", em: "aunque tú no estés." },
     lead: "Sinblix POS lleva tus ventas, inventario y fiados en dólares y bolívares con la tasa BCV del día. Aria, nuestra asistente con IA, contesta el WhatsApp de tu negocio las 24 horas.",
     trial: "Prueba Sinblix POS gratis 30 días",
@@ -76,6 +78,30 @@ export const es = {
       },
     ],
   },
+  precios: {
+    title: { lead: "Precios de Sinblix POS ", em: "y Aria." },
+    intro:
+      "Precios en dólares. En Venezuela pagas en bolívares a la tasa BCV del día; en Colombia te cobramos en pesos.",
+    month: "al mes",
+    pos: {
+      name: "Sinblix POS",
+      note: "Prueba gratis de 30 días en cualquier plan.",
+      plans: [
+        { name: "Starter", price: "$10", detail: "Hasta 300 productos y 2 usuarios" },
+        { name: "Business", price: "$25", detail: "Hasta 1.000 productos y 5 usuarios" },
+        { name: "Pro", price: "$50", detail: "Productos y usuarios ilimitados" },
+      ],
+    },
+    aria: {
+      name: "Aria",
+      note: "Configuración inicial de $30, gratis si pagas 3 meses por adelantado.",
+      plans: [
+        { name: "Básico", price: "$15", detail: "Hasta 1.000 respuestas al mes" },
+        { name: "Pro", price: "$29", detail: "Hasta 3.000 respuestas al mes" },
+        { name: "Negocio", price: "$49", detail: "Hasta 8.000 respuestas al mes" },
+      ],
+    },
+  },
   desarrollo: {
     title: "Desarrollo a la medida",
     line: "Un sistema o una página web hecha para cómo trabaja tu negocio.",
@@ -101,6 +127,14 @@ export const es = {
       {
         q: "¿Cómo pago?",
         a: "En dólares, en bolívares a la tasa BCV del día, o en pesos en Colombia.",
+      },
+      {
+        q: "¿Cuánto cuesta?",
+        a: "Sinblix POS cuesta desde $10 al mes y tiene 30 días de prueba gratis. Aria cuesta desde $15 al mes.",
+      },
+      {
+        q: "¿Trabajan con negocios en Colombia?",
+        a: "Sí. Trabajamos en línea en toda Venezuela y Colombia, y en Colombia te cobramos en pesos.",
       },
     ],
   },

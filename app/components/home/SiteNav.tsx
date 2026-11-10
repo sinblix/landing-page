@@ -15,6 +15,7 @@ export function SiteNav({ onHome = true }: { onHome?: boolean }) {
   const items = [
     { href: `${base}#pos`, label: t.nav.pos },
     { href: `${base}#aria`, label: t.nav.aria },
+    { href: `${base}#precios`, label: t.nav.precios },
     { href: `${base}#desarrollo`, label: t.nav.desarrollo },
     { href: `${base}#preguntas`, label: t.nav.preguntas },
   ];

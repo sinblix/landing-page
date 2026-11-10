@@ -11,8 +11,11 @@ export function Desarrollo() {
     <section id="desarrollo" className="dev sx-aurora">
       <div className="section__inner dev__inner sx-stagger">
         <div className="dev__copy">
-          <span className="eyebrow">{d.title}</span>
           <h2 className="h2">
+            <span className="eyebrow">
+              {d.title}
+              <span className="sr-only">: </span>
+            </span>
             {d.heading.lead}
             <em>{d.heading.em}</em>
           </h2>

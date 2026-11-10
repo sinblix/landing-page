@@ -1,0 +1,32 @@
+# Sinblix
+
+> Sinblix hace software para negocios pequeños y medianos en Venezuela y Colombia: Sinblix POS (sistema de ventas e inventario en la nube), Aria (asistente con IA que responde el WhatsApp del negocio) y desarrollo de sistemas y páginas web a la medida. Trabaja en línea en toda Venezuela y Colombia.
+
+## Productos
+
+- [Sinblix POS](https://www.sinblix.com/#pos): punto de venta e inventario en la nube. Vende en dólares, bolívares o euros con la tasa BCV que se actualiza sola. Si se va el internet, la venta se guarda en el equipo y se sincroniza al volver la conexión. Incluye caja, inventario, clientes, fiados (créditos) con recordatorio por WhatsApp y reportes. Funciona en computadora, tablet y teléfono desde el navegador. Prueba gratis de 30 días: https://pos.sinblix.com/register
+- [Aria](https://www.sinblix.com/#aria): asistente con IA que responde el WhatsApp del negocio las 24 horas con sus precios, horarios, servicios y ubicación. Cuando el dueño responde a mano un chat, Aria deja de escribirle a ese cliente.
+- [Desarrollo a la medida](https://www.sinblix.com/#desarrollo): sistemas y páginas web hechos para el proceso de cada negocio. Precio según el proyecto, cotización por WhatsApp.
+
+## Precios
+
+- [Precios en Markdown](https://www.sinblix.com/pricing.md): planes de Sinblix POS y Aria en dólares.
+- Sinblix POS: Starter $10/mes, Business $25/mes, Pro $50/mes.
+- Aria: Básico $15/mes, Pro $29/mes, Negocio $49/mes.
+- Promoción Navidad Congelada (hasta el 31 de diciembre de 2026): Aria a $10, $25 o $40 al mes para siempre mientras el plan siga activo.
+
+## Pagos y países
+
+- Precios en dólares estadounidenses. En Venezuela se paga en bolívares a la tasa BCV del día. En Colombia se cobra en pesos colombianos.
+- Atención de personas: lunes a viernes, de 8:00 a. m. a 6:00 p. m., hora de cada país. Aria responde a cualquier hora.
+
+## Contacto
+
+- WhatsApp: https://wa.me/584121785954
+- Instagram: https://www.instagram.com/sinblix.ven/
+- Sitio: https://www.sinblix.com/
+
+## Legal
+
+- [Política de privacidad](https://www.sinblix.com/politica-privacidad)
+- [Términos de servicio](https://www.sinblix.com/terminos-de-servicio)

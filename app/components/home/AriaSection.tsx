@@ -46,8 +46,11 @@ export function AriaSection() {
     <section id="aria" className="aria">
       <div className="section__inner aria__inner sx-stagger">
         <div className="aria__copy">
-          <span className="eyebrow">{a.eyebrow}</span>
           <h2 className="h2">
+            <span className="eyebrow">
+              {a.eyebrow}
+              <span className="sr-only">: </span>
+            </span>
             {a.title.lead}
             <em>{a.title.em}</em>
           </h2>

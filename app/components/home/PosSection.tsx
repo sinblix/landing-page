@@ -11,8 +11,11 @@ export function PosSection() {
     <section id="pos" className="section">
       <div className="section__inner pos">
         <div className="pos__head sx-slow">
-          <span className="eyebrow">{p.eyebrow}</span>
           <h2 className="h2">
+            <span className="eyebrow">
+              {p.eyebrow}
+              <span className="sr-only">: </span>
+            </span>
             {p.title.lead}
             <em className="sx-sheen">{p.title.em}</em>
           </h2>

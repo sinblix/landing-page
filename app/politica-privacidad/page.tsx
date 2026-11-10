@@ -6,25 +6,25 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
 const pageUrl = `${baseUrl}/politica-privacidad`;
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | SINBLIX",
+  title: "Política de Privacidad | Sinblix",
   description:
-    "Política de privacidad de SINBLIX sobre privacidad de datos en software, seguridad en automatización y uso responsable de información personal.",
+    "Política de privacidad de Sinblix: cómo tratamos los datos de los negocios que usan Sinblix POS, Aria y nuestros desarrollos a la medida.",
   alternates: {
     canonical: pageUrl,
   },
   openGraph: {
-    title: "Política de Privacidad | SINBLIX",
+    title: "Política de Privacidad | Sinblix",
     description:
-      "Conoce cómo SINBLIX gestiona tus datos personales y protege tu información.",
+      "Conoce cómo Sinblix gestiona tus datos personales y protege tu información.",
     url: pageUrl,
-    siteName: "SINBLIX",
+    siteName: "Sinblix",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Política de Privacidad | SINBLIX",
+    title: "Política de Privacidad | Sinblix",
     description:
-      "Conoce cómo SINBLIX gestiona tus datos personales y protege tu información.",
+      "Conoce cómo Sinblix gestiona tus datos personales y protege tu información.",
   },
 };
 

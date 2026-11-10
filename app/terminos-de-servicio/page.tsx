@@ -6,25 +6,25 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sinblix.com";
 const pageUrl = `${baseUrl}/terminos-de-servicio`;
 
 export const metadata: Metadata = {
-  title: "Términos de Servicio | SINBLIX",
+  title: "Términos de Servicio | Sinblix",
   description:
-    "Términos y condiciones de uso de los servicios de SINBLIX: automatización de procesos, software a medida e inteligencia artificial.",
+    "Términos y condiciones de uso de Sinblix POS, Aria y los servicios de desarrollo a la medida de Sinblix.",
   alternates: {
     canonical: pageUrl,
   },
   openGraph: {
-    title: "Términos de Servicio | SINBLIX",
+    title: "Términos de Servicio | Sinblix",
     description:
-      "Lee los términos y condiciones que rigen el uso de los servicios y plataformas de SINBLIX.",
+      "Lee los términos y condiciones que rigen el uso de los servicios y plataformas de Sinblix.",
     url: pageUrl,
-    siteName: "SINBLIX",
+    siteName: "Sinblix",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Términos de Servicio | SINBLIX",
+    title: "Términos de Servicio | Sinblix",
     description:
-      "Lee los términos y condiciones que rigen el uso de los servicios y plataformas de SINBLIX.",
+      "Lee los términos y condiciones que rigen el uso de los servicios y plataformas de Sinblix.",
   },
 };
 

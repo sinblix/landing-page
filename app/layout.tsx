@@ -50,7 +50,7 @@ export const viewport: Viewport = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "SINBLIX",
+  name: "Sinblix",
   url: baseUrl,
   logo: `${baseUrl}/logos/logo.svg`,
   description: es.metadata.description,
@@ -70,7 +70,7 @@ const websiteSchema = {
   name: "Sinblix",
   url: baseUrl,
   inLanguage: "es",
-  publisher: { "@type": "Organization", name: "SINBLIX" },
+  publisher: { "@type": "Organization", name: "Sinblix" },
 };
 
 const plan = (name: string, price: string) => ({
@@ -96,7 +96,7 @@ const posSchema = {
   url: "https://pos.sinblix.com/register",
   description: es.pos.body,
   offers: [plan("Starter", "10"), plan("Business", "25"), plan("Pro", "50")],
-  publisher: { "@type": "Organization", name: "SINBLIX" },
+  publisher: { "@type": "Organization", name: "Sinblix" },
 };
 
 const areaServed = [
@@ -110,8 +110,9 @@ const ariaSchema = {
   name: "Aria",
   serviceType: "Asistente con IA para WhatsApp",
   description: es.aria.body,
-  provider: { "@type": "Organization", name: "SINBLIX", url: baseUrl },
+  provider: { "@type": "Organization", name: "Sinblix", url: baseUrl },
   areaServed,
+  offers: [plan("Básico", "15"), plan("Pro", "29"), plan("Negocio", "49")],
 };
 
 const desarrolloSchema = {
@@ -120,7 +121,7 @@ const desarrolloSchema = {
   name: es.desarrollo.title,
   serviceType: "Desarrollo de software y páginas web a la medida",
   description: es.desarrollo.line,
-  provider: { "@type": "Organization", name: "SINBLIX", url: baseUrl },
+  provider: { "@type": "Organization", name: "Sinblix", url: baseUrl },
   areaServed,
 };
 

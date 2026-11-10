@@ -27,6 +27,8 @@
   --sans: var(--font-sans), "Geist", system-ui, sans-serif;
   --mono: var(--font-mono), "Geist Mono", ui-monospace, Menlo, monospace;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --wrap: 1240px;
   --gutter: 24px;
 }
@@ -146,53 +148,76 @@ body {
 
 /* ---------------------------------------------------------------- the design's motion */
 .sx-card {
-  transition: transform 0.35s var(--ease), border-color 0.35s, background 0.35s;
-}
-.sx-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent);
-  background: #16161a;
+  transition: transform 220ms var(--ease-out), border-color 200ms ease, background-color 200ms ease;
 }
 .sx-btn {
-  transition: transform 0.25s var(--ease), box-shadow 0.25s;
+  transition: transform 200ms var(--ease-out), box-shadow 200ms ease;
 }
-.sx-btn:hover {
-  transform: translateY(-2px) scale(1.02);
+/* Press feedback works on touch too; hover lifts only where a real pointer hovers. */
+.sx-btn:active {
+  transform: scale(0.97);
+  transition-duration: 120ms;
+}
+@media (hover: hover) and (pointer: fine) {
+  .sx-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    background-color: #16161a;
+  }
+  .sx-btn:hover {
+    transform: translateY(-1px);
+  }
+  .sx-btn:hover:active {
+    transform: translateY(0) scale(0.97);
+  }
 }
 .sx-shine {
   position: relative;
   overflow: hidden;
 }
-.sx-aurora {
-  background-color: var(--ground-2);
-  background-image: radial-gradient(40% 60% at 20% 30%, rgba(255, 122, 47, 0.28), transparent 70%),
-    radial-gradient(35% 55% at 80% 70%, rgba(255, 181, 71, 0.18), transparent 70%),
-    radial-gradient(30% 50% at 60% 10%, rgba(255, 90, 40, 0.16), transparent 70%);
-  background-size: 160% 160%;
-  background-position: 0% 0%;
+.sx-pay {
+  position: relative;
 }
-@keyframes sx-rise { from { opacity: 0; transform: translateY(64px); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
-@keyframes sx-in { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
-@keyframes sx-tilt { from { transform: rotateX(38deg) scale(0.86); opacity: 0.3; } to { transform: rotateX(0deg) scale(1); opacity: 1; } }
-@keyframes sx-phone { from { transform: rotateY(-50deg) rotateX(18deg) translateY(120px); } to { transform: rotateY(-4deg) rotateX(2deg) translateY(0); } }
-@keyframes sx-zoom { from { transform: scale(0.7); opacity: 0.1; } to { transform: scale(1); opacity: 1; } }
+/* The aurora moves a layer with transform instead of repainting background-position every frame. */
+.sx-aurora {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: var(--ground-2);
+}
+.sx-aurora::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(32% 48% at 25% 35%, rgba(255, 122, 47, 0.28), transparent 70%),
+    radial-gradient(28% 44% at 75% 65%, rgba(255, 181, 71, 0.18), transparent 70%),
+    radial-gradient(24% 40% at 58% 18%, rgba(255, 90, 40, 0.16), transparent 70%);
+}
+/* Reveals move with `translate`, not `transform`, so a card's hover lift (transform) still works after it has revealed. */
+@keyframes sx-rise { from { opacity: 0; translate: 0 32px; filter: blur(4px); } to { opacity: 1; translate: 0 0; filter: none; } }
+@keyframes sx-in { from { opacity: 0; transform: translateY(16px); filter: blur(2px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes sx-tilt { from { transform: rotateX(30deg) scale(0.92); opacity: 0.5; } to { transform: rotateX(0deg) scale(1); opacity: 1; } }
+@keyframes sx-phone { from { transform: rotateY(-34deg) rotateX(12deg) translateY(64px); } to { transform: rotateY(-4deg) rotateX(2deg) translateY(0); } }
+@keyframes sx-zoom { from { transform: scale(0.94); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 @keyframes sx-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes sx-slow { from { transform: translateY(90px); } to { transform: translateY(-50px); } }
 @keyframes sx-fast { from { transform: translateY(200px); } to { transform: translateY(-140px); } }
-@keyframes sx-left { from { opacity: 0; transform: translateX(-120px); } to { opacity: 1; transform: none; } }
+@keyframes sx-left { from { opacity: 0; translate: -40px 0; } to { opacity: 1; translate: 0 0; } }
 @keyframes sx-bob { from { transform: translateY(-10px) rotate(-1deg); } to { transform: translateY(12px) rotate(1deg); } }
 @keyframes sx-slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes sx-sheen { from { background-position: 200% 0; } to { background-position: -200% 0; } }
-@keyframes sx-shine { 0% { left: -60%; } 35% { left: 130%; } 100% { left: 130%; } }
+@keyframes sx-shine { 0% { transform: translateX(-160%) skewX(-20deg); } 18%, 100% { transform: translateX(360%) skewX(-20deg); } }
 @keyframes sx-tile { 0%, 14% { border-color: #2c2c31; background: #1f1f24; } 4%, 10% { border-color: #ff7a2f; background: #2a1a10; } }
-@keyframes sx-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 122, 47, 0); } 50% { box-shadow: 0 0 0 6px rgba(255, 122, 47, 0.22); } }
+@keyframes sx-glow { 0%, 100% { opacity: 0; transform: scale(0.98); } 50% { opacity: 1; transform: scale(1); } }
 @keyframes sx-dot { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
 @keyframes sx-m1 { 0%, 4% { opacity: 0; transform: translateY(12px); } 8%, 90% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
 @keyframes sx-m2 { 0%, 18% { opacity: 0; transform: translateY(12px); } 22%, 90% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
 @keyframes sx-m3 { 0%, 38% { opacity: 0; transform: translateY(12px); } 42%, 90% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
 @keyframes sx-m4 { 0%, 52% { opacity: 0; transform: translateY(12px); } 56%, 90% { opacity: 1; transform: none; } 96%, 100% { opacity: 0; } }
 @keyframes sx-m5 { 0%, 58% { opacity: 0; } 62%, 88% { opacity: 1; } 92%, 100% { opacity: 0; } }
-@keyframes sx-aurora { 0% { background-position: 0% 0%; } 50% { background-position: 100% 60%; } 100% { background-position: 30% 100%; } }
+@keyframes sx-aurora { 0% { transform: translate3d(-6%, -4%, 0) rotate(0deg); } 50% { transform: translate3d(6%, 3%, 0) rotate(4deg); } 100% { transform: translate3d(-2%, 6%, 0) rotate(-3deg); } }
 @keyframes sx-breathe { from { transform: translate(-50%, 0) scale(0.85); opacity: 0.55; } to { transform: translate(-50%, 0) scale(1.2); opacity: 1; } }
 @keyframes sx-nudge { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(4px, -4px); } }
 
@@ -208,27 +233,40 @@ body {
 
 /* Time-driven loops and the load cascade run only for visitors who allow motion. */
 @media (prefers-reduced-motion: no-preference) {
-  .sx-load > * { animation: sx-in 0.9s var(--ease) both; }
-  .sx-load > *:nth-child(2) { animation-delay: 0.08s; }
-  .sx-load > *:nth-child(3) { animation-delay: 0.16s; }
-  .sx-load > *:nth-child(4) { animation-delay: 0.24s; }
-  .sx-load > *:nth-child(5) { animation-delay: 0.32s; }
+  .sx-load > * { animation: sx-in 0.7s var(--ease-out) both; }
+  .sx-load > *:nth-child(2) { animation-delay: 60ms; }
+  .sx-load > *:nth-child(3) { animation-delay: 120ms; }
+  .sx-load > *:nth-child(4) { animation-delay: 180ms; }
+  .sx-load > *:nth-child(5) { animation-delay: 240ms; }
   .sx-bob { animation: sx-bob 5s ease-in-out infinite alternate; }
   .sx-bob-2 { animation: sx-bob 6.5s ease-in-out -2s infinite alternate; }
   .sx-bob-3 { animation: sx-bob 4.2s ease-in-out -1s infinite alternate; }
   .sx-marquee { animation: sx-slide 32s linear infinite; }
   .sx-marquee-rev { animation: sx-slide 40s linear infinite reverse; }
+  /* Moving text pauses under the pointer so it can be read. */
+  .marquee:hover .sx-marquee,
+  .marquee:hover .sx-marquee-rev { animation-play-state: paused; }
   .sx-sheen { animation: sx-sheen 6s linear infinite; }
+  /* One sweep every 6 s, moved with transform; it plays on the hero's main button only, so four buttons don't flash together. */
   .sx-shine::after {
     content: "";
     position: absolute;
     top: 0;
-    left: -60%;
+    left: 0;
     width: 40%;
     height: 100%;
-    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-    transform: skewX(-20deg);
-    animation: sx-shine 3.8s ease-in-out infinite;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+    transform: translateX(-160%) skewX(-20deg);
+    pointer-events: none;
+  }
+  .hero .sx-shine::after { animation: sx-shine 6s var(--ease-in-out) 1.2s infinite; }
+  .sx-pay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 6px rgba(255, 122, 47, 0.22);
+    opacity: 0;
     pointer-events: none;
   }
   .sx-tile { animation: sx-tile 7s linear infinite; }
@@ -237,7 +275,7 @@ body {
   .sx-tile:nth-child(4) { animation-delay: 3.6s; }
   .sx-tile:nth-child(5) { animation-delay: 4.8s; }
   .sx-tile:nth-child(6) { animation-delay: 6s; }
-  .sx-pay { animation: sx-glow 2.4s ease-in-out infinite; }
+  .sx-pay::after { animation: sx-glow 2.4s ease-in-out infinite; }
   .sx-dot { animation: sx-dot 1.4s ease-in-out infinite; }
   .sx-dot:nth-child(2) { animation-delay: 0.2s; }
   .sx-dot:nth-child(3) { animation-delay: 0.4s; }
@@ -246,7 +284,7 @@ body {
   .sx-m3 { animation: sx-m3 11s ease-out infinite; }
   .sx-m4 { animation: sx-m4 11s ease-out infinite; }
   .sx-m5 { animation: sx-m5 11s ease-out infinite; }
-  .sx-aurora { animation: sx-aurora 16s ease-in-out infinite alternate; }
+  .sx-aurora::before { animation: sx-aurora 16s ease-in-out infinite alternate; }
   .sx-breathe { animation: sx-breathe 7s ease-in-out infinite alternate; }
   .sx-nudge { animation: sx-nudge 1.8s ease-in-out infinite; }
 
@@ -440,6 +478,27 @@ body {
   line-height: 0.98;
   letter-spacing: -0.025em;
   text-wrap: balance;
+}
+/* The h1 carries a small kicker line (what is sold and where) above the big headline. */
+.hero__kicker {
+  display: inline-block;
+  margin-bottom: 26px;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+.hero__headline {
+  display: block;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 .hero__title em,
 .h2 em,
@@ -817,6 +876,104 @@ body {
   font-size: clamp(38px, 4.4vw, 64px);
   line-height: 1.02;
   letter-spacing: -0.02em;
+}
+/* A section's product name sits inside its h2 (for search and AI answers), styled as the small label. */
+.h2 > .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------------------------- #precios */
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.prices__head {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 760px;
+}
+.prices__intro {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+.prices__groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+}
+@media (max-width: 860px) {
+  .prices__groups {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.prices__group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.prices__name {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--accent-text);
+}
+.prices__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.prices__plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 4px 16px;
+  padding: 20px 22px;
+  border: 1px solid var(--edge);
+  border-radius: 16px;
+}
+.prices__plan-name {
+  font-size: 17px;
+  font-weight: 500;
+}
+.prices__amount {
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1;
+  text-align: right;
+}
+.prices__amount span {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--dim);
+}
+.prices__detail {
+  grid-column: 1 / -1;
+  font-size: 15px;
+  color: var(--muted);
+}
+.prices__note,
+.prices__promo {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.prices__promo strong {
+  font-weight: 500;
+  color: #9fd8ff;
 }
 
 /* ---------------------------------------------------------------- #pos */

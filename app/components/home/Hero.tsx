@@ -75,10 +75,15 @@ export function Hero() {
       <div className="hero__inner">
         <div className="hero__row">
           <div className="hero__copy sx-load">
-            <span className="pill">{h.eyebrow}</span>
             <h1 className="hero__title">
-              {h.title.lead}
-              <em className="sx-sheen">{h.title.em}</em>
+              <span className="pill hero__kicker">
+                {h.eyebrow}
+                <span className="sr-only">: </span>
+              </span>
+              <span className="hero__headline">
+                {h.title.lead}
+                <em className="sx-sheen">{h.title.em}</em>
+              </span>
             </h1>
             <p className="hero__lead">{h.lead}</p>
             <div className="btn-row">

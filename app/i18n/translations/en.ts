@@ -14,6 +14,7 @@ export const en: Translation = {
     pos: "Sinblix POS",
     aria: "Aria",
     desarrollo: "Development",
+    precios: "Pricing",
     preguntas: "Questions",
     cta: "Try it free for 30 days",
     langShort: "ES",
@@ -21,7 +22,7 @@ export const en: Translation = {
     home: "Sinblix, home",
   },
   hero: {
-    eyebrow: "Venezuela and Colombia · sales + WhatsApp",
+    eyebrow: "POS system and AI WhatsApp assistant · Venezuela and Colombia",
     title: { lead: "Your till balanced and your WhatsApp answered, ", em: "even when you are away." },
     lead: "Sinblix POS keeps your sales, inventory and store credit in dollars and bolívares at the day's BCV rate. Aria, our AI assistant, answers your business WhatsApp 24 hours a day.",
     trial: "Try Sinblix POS free for 30 days",
@@ -76,6 +77,30 @@ export const en: Translation = {
       },
     ],
   },
+  precios: {
+    title: { lead: "Sinblix POS and Aria ", em: "pricing." },
+    intro:
+      "Prices in US dollars. In Venezuela you pay in bolívares at the day's BCV rate; in Colombia we bill you in pesos.",
+    month: "a month",
+    pos: {
+      name: "Sinblix POS",
+      note: "30-day free trial on every plan.",
+      plans: [
+        { name: "Starter", price: "$10", detail: "Up to 300 products and 2 users" },
+        { name: "Business", price: "$25", detail: "Up to 1,000 products and 5 users" },
+        { name: "Pro", price: "$50", detail: "Unlimited products and users" },
+      ],
+    },
+    aria: {
+      name: "Aria",
+      note: "One-time setup of $30, free if you pay 3 months in advance.",
+      plans: [
+        { name: "Basic", price: "$15", detail: "Up to 1,000 replies a month" },
+        { name: "Pro", price: "$29", detail: "Up to 3,000 replies a month" },
+        { name: "Business", price: "$49", detail: "Up to 8,000 replies a month" },
+      ],
+    },
+  },
   desarrollo: {
     title: "Custom development",
     line: "A system or a website built for how your business works.",
@@ -101,6 +126,14 @@ export const en: Translation = {
       {
         q: "How do I pay?",
         a: "In dollars, in bolívares at the day's BCV rate, or in pesos in Colombia.",
+      },
+      {
+        q: "How much does it cost?",
+        a: "Sinblix POS starts at $10 a month with a 30-day free trial. Aria starts at $15 a month.",
+      },
+      {
+        q: "Do you work with businesses in Colombia?",
+        a: "Yes. We work online across Venezuela and Colombia, and in Colombia we bill you in pesos.",
       },
     ],
   },
