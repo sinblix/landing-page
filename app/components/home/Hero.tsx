@@ -75,7 +75,7 @@ export function Hero() {
       <div className="hero__inner">
         <div className="hero__row">
           <div className="hero__copy sx-load">
-            <h1 className="hero__title">
+            <h2 className="hero__title">
               <span className="pill hero__kicker">
                 {h.eyebrow}
                 <span className="sr-only">: </span>
@@ -84,7 +84,7 @@ export function Hero() {
                 {h.title.lead}
                 <em className="sx-sheen">{h.title.em}</em>
               </span>
-            </h1>
+            </h2>
             <p className="hero__lead">{h.lead}</p>
             <div className="btn-row">
               <a className="btn btn--accent btn--glow sx-btn sx-shine" href={links.trial}>

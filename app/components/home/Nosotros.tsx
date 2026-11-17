@@ -2,7 +2,7 @@
 
 import { useTranslation } from "@/app/i18n/hooks";
 
-// "Quiénes somos": says plainly what Sinblix is (a software factory in Venezuela) before the products. It opens the page, so it carries id="top".
+// "Quiénes somos" holds the page h1: says plainly what Sinblix is (a software factory in Venezuela) before the products. It opens the page, so it carries id="top".
 export function Nosotros() {
   const t = useTranslation();
   const n = t.nosotros;
@@ -10,14 +10,14 @@ export function Nosotros() {
     <section id="top" className="section about-sec">
       <span id="nosotros" aria-hidden="true" />
       <div className="section__inner about sx-stagger">
-        <h2 className="h2">
+        <h1 className="h2 about__title">
           <span className="eyebrow">
             {n.eyebrow}
             <span className="sr-only">: </span>
           </span>
           {n.title.lead}
           <em>{n.title.em}</em>
-        </h2>
+        </h1>
         <div className="about__copy">
           <p>{n.body}</p>
           <p className="about__products">{n.products}</p>

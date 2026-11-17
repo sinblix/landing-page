@@ -15,7 +15,6 @@ export const es = {
     servicios: "Servicios",
     pos: "Sinblix POS",
     aria: "Aria",
-    desarrollo: "Desarrollo",
     precios: "Precios",
     preguntas: "Preguntas",
     cta: "Prueba gratis 30 días",
@@ -30,7 +29,7 @@ export const es = {
     lead: "Sinblix POS lleva tus ventas, inventario y fiados en dólares y bolívares con la tasa BCV del día. Aria, nuestra asistente con IA, contesta el WhatsApp de tu negocio las 24 horas.",
     trial: "Prueba Sinblix POS gratis 30 días",
     aria: "Habla con Aria por WhatsApp",
-    note: "Planes desde $10 al mes. Trabajamos en línea en toda Venezuela y Colombia.",
+    note: "Planes desde $10 al mes, en Venezuela y Colombia.",
     canvasLabel:
       "Gotas líquidas oscuras en 3D con reflejos naranja y ámbar que giran, se funden y siguen al cursor",
     chips: {
@@ -57,7 +56,7 @@ export const es = {
   nosotros: {
     eyebrow: "Quiénes somos",
     title: { lead: "Sinblix es una fábrica de software ", em: "en Venezuela." },
-    body: "Estamos especializados en desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, e inteligencia artificial. Trabajamos con empresas de Barquisimeto, Caracas, toda Venezuela y Latinoamérica, y transformamos ideas en software que impulsa tu negocio.",
+    body: "Estamos especializados en desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, e inteligencia artificial. Desde Barquisimeto y Caracas trabajamos en línea con empresas de toda Venezuela y Colombia, y hacemos proyectos a medida para el resto de Latinoamérica.",
     products: "Sinblix POS y Aria son nuestros productos propios.",
   },
   servicios: {
@@ -141,13 +140,6 @@ export const es = {
       ],
     },
   },
-  desarrollo: {
-    title: "Desarrollo a la medida",
-    line: "Un sistema o una página web hecha para cómo trabaja tu negocio.",
-    heading: { lead: "Un sistema o una página web hecha para ", em: "cómo trabaja tu negocio." },
-    body: "Cuéntanos en dos líneas qué necesitas y un asesor te envía la cotización.",
-    cta: "Pedir cotización por WhatsApp",
-  },
   faq: {
     title: "Preguntas frecuentes",
     items: [
@@ -172,20 +164,30 @@ export const es = {
         a: "Sinblix POS cuesta desde $10 al mes y tiene 30 días de prueba gratis. Aria cuesta desde $15 al mes.",
       },
       {
+        q: "¿Cuánto tarda un desarrollo a medida?",
+        a: "Un proyecto pequeño toma de 2 a 4 semanas y uno complejo de 3 a 6 meses o más. El plazo exacto va en la cotización.",
+      },
+      {
+        q: "¿Cómo cobran un desarrollo a medida?",
+        a: "Por proyecto, por horas o por sprint, sin costos ocultos. Después del lanzamiento damos mantenimiento, actualizaciones y capacitación.",
+      },
+      {
         q: "¿Trabajan con negocios en Colombia?",
         a: "Sí. Trabajamos en línea en toda Venezuela y Colombia, y en Colombia te cobramos en pesos.",
       },
     ],
   },
   close: {
-    title: { lead: "Prueba Sinblix POS ", em: "30 días gratis." },
+    title: { lead: "Cuéntanos tu proyecto ", em: "o prueba Sinblix POS gratis." },
+    quote: "Escríbenos por WhatsApp",
     trial: "Crear mi cuenta gratis",
-    aria: "Habla con Aria",
   },
   footer: {
     privacy: "Política de privacidad",
     terms: "Términos de servicio",
     instagram: "Instagram",
+    whatsapp: "WhatsApp +58 412 178 5954",
+    place: "Barquisimeto, Venezuela",
   },
 };
 

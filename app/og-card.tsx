@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 // The 1200x630 share card (PNG) behind opengraph-image and twitter-image: WhatsApp and Facebook do
 // not render SVG. Drawn in the "Noche en movimiento" look: night ground, serif headline, orange.
 export const ogSize = { width: 1200, height: 630 };
-export const ogAlt = "Sinblix: sistema POS y bot de WhatsApp con IA para negocios en Venezuela y Colombia";
+export const ogAlt = "Sinblix: fábrica de software en Venezuela. Software a medida, Sinblix POS y Aria";
 
 // Instrument Serif for the headline, fetched once at build time (the card is static). If the
 // fetch fails the card still renders in the default font.
@@ -60,21 +60,19 @@ export async function renderOgCard() {
               maxWidth: 1000,
             }}
           >
-            <span>La caja cuadrada y el WhatsApp respondido,</span>
-            <span style={{ color: "#ff8a3d", fontStyle: "italic" }}>aunque tú no estés.</span>
+            <span>Sinblix es una fábrica de software</span>
+            <span style={{ color: "#ff8a3d", fontStyle: "italic" }}>en Venezuela.</span>
           </div>
           <div style={{ fontSize: 28, lineHeight: 1.4, color: "#c9c2b7", maxWidth: 940 }}>
-            Sistema POS y asistente de WhatsApp con IA para negocios en Venezuela y Colombia. Prueba gratis 30 días.
+            Software a medida, web y móvil, cloud y DevOps, e inteligencia artificial. Creadores de Sinblix POS y Aria.
           </div>
         </div>
         <div style={{ display: "flex", gap: 14, fontSize: 24 }}>
           <span style={{ background: "#ff7a2f", color: "#160800", padding: "10px 20px", borderRadius: 12 }}>
-            Sinblix POS
+            Software a medida
           </span>
+          <span style={{ border: "1px solid #3a3a40", padding: "10px 20px", borderRadius: 12 }}>Sinblix POS</span>
           <span style={{ border: "1px solid #3a3a40", padding: "10px 20px", borderRadius: 12 }}>Aria</span>
-          <span style={{ border: "1px solid #3a3a40", padding: "10px 20px", borderRadius: 12 }}>
-            Desarrollo a la medida
-          </span>
         </div>
       </div>
     ),

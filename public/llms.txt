@@ -1,6 +1,6 @@
 # Sinblix
 
-> Sinblix es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, e inteligencia artificial. Para negocios pequeños y medianos en Venezuela y Colombia ofrece Sinblix POS (sistema de ventas e inventario en la nube), Aria (asistente con IA que responde el WhatsApp del negocio) y desarrollo de sistemas y páginas web a la medida. Trabaja en línea en toda Venezuela y Colombia.
+> Sinblix es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, e inteligencia artificial. Para negocios pequeños y medianos en Venezuela y Colombia ofrece Sinblix POS (sistema de ventas e inventario en la nube), Aria (asistente con IA que responde el WhatsApp del negocio) y desarrollo de sistemas y páginas web a la medida. Trabaja en línea en toda Venezuela y Colombia, y hace proyectos a medida para el resto de Latinoamérica.
 
 ## Servicios
 
@@ -10,7 +10,7 @@
 
 - [Sinblix POS](https://www.sinblix.com/#pos): punto de venta e inventario en la nube. Vende en dólares, bolívares o euros con la tasa BCV que se actualiza sola. Si se va el internet, la venta se guarda en el equipo y se sincroniza al volver la conexión. Incluye caja, inventario, clientes, fiados (créditos) con recordatorio por WhatsApp y reportes. Funciona en computadora, tablet y teléfono desde el navegador. Prueba gratis de 30 días: https://pos.sinblix.com/register
 - [Aria](https://www.sinblix.com/#aria): asistente con IA que responde el WhatsApp del negocio las 24 horas con sus precios, horarios, servicios y ubicación. Cuando el dueño responde a mano un chat, Aria deja de escribirle a ese cliente.
-- [Desarrollo a la medida](https://www.sinblix.com/#desarrollo): sistemas y páginas web hechos para el proceso de cada negocio. Precio según el proyecto, cotización por WhatsApp.
+- [Desarrollo a la medida](https://www.sinblix.com/#servicios): sistemas y páginas web hechos para el proceso de cada negocio. Proyectos pequeños de 2 a 4 semanas y complejos de 3 a 6 meses o más. Se cobra por proyecto, por horas o por sprint, sin costos ocultos; incluye mantenimiento, actualizaciones y capacitación después del lanzamiento. Cotización por WhatsApp.
 
 ## Precios
 
