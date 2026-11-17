@@ -3,14 +3,16 @@
 // Headings with an italic tail are split in two: `lead` (upright) and `em` (italic, orange).
 export const es = {
   metadata: {
-    title: "Sinblix | Sistema POS y bot de WhatsApp con IA para negocios",
+    title: "Sinblix | Fábrica de software en Venezuela · Sistema POS y WhatsApp con IA",
     description:
-      "Ventas e inventario en dólares y bolívares con tasa BCV, aun sin internet, y una asistente con IA que responde tu WhatsApp 24/7. Prueba gratis 30 días.",
+      "Sinblix es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, e inteligencia artificial. Creadores de Sinblix POS y Aria, la asistente con IA para WhatsApp.",
   },
   nav: {
     label: "Principal",
     skip: "Saltar al contenido",
     menu: "Menú",
+    nosotros: "Nosotros",
+    servicios: "Servicios",
     pos: "Sinblix POS",
     aria: "Aria",
     desarrollo: "Desarrollo",
@@ -23,7 +25,7 @@ export const es = {
   },
   hero: {
     // Part of the h1 (small line above the headline), so the h1 names what is sold and where.
-    eyebrow: "Sistema POS y WhatsApp con IA · Venezuela y Colombia",
+    eyebrow: "Fábrica de software en Venezuela · Sistema POS y WhatsApp con IA",
     title: { lead: "La caja cuadrada y el WhatsApp respondido, ", em: "aunque tú no estés." },
     lead: "Sinblix POS lleva tus ventas, inventario y fiados en dólares y bolívares con la tasa BCV del día. Aria, nuestra asistente con IA, contesta el WhatsApp de tu negocio las 24 horas.",
     trial: "Prueba Sinblix POS gratis 30 días",
@@ -51,6 +53,43 @@ export const es = {
       "VENEZUELA",
       "COLOMBIA",
     ],
+  },
+  nosotros: {
+    eyebrow: "Quiénes somos",
+    title: { lead: "Sinblix es una fábrica de software ", em: "en Venezuela." },
+    body: "Estamos especializados en desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, e inteligencia artificial. Trabajamos con empresas de Barquisimeto, Caracas, toda Venezuela y Latinoamérica, y transformamos ideas en software que impulsa tu negocio.",
+    products: "Sinblix POS y Aria son nuestros productos propios.",
+  },
+  servicios: {
+    eyebrow: "Servicios",
+    title: { lead: "Soluciones tecnológicas completas ", em: "para impulsar tu negocio." },
+    items: [
+      {
+        title: "Desarrollo de software a medida",
+        body: "Sistemas hechos para las necesidades específicas de tu negocio.",
+      },
+      {
+        title: "Desarrollo web y móvil",
+        body: "Páginas web y aplicaciones móviles modernas, rápidas y escalables.",
+      },
+      {
+        title: "Cloud y DevOps",
+        body: "Infraestructura en la nube, automatización y despliegue continuo.",
+      },
+      {
+        title: "Inteligencia artificial",
+        body: "IA y machine learning para automatizar procesos, predecir y decidir mejor.",
+      },
+      {
+        title: "Automatización de procesos",
+        body: "Flujos de trabajo automáticos con n8n y otras herramientas, con menos errores.",
+      },
+      {
+        title: "Consultoría tecnológica",
+        body: "Asesoría para mejorar tus procesos y adoptar la tecnología correcta.",
+      },
+    ],
+    cta: "Cuéntanos tu proyecto",
   },
   pos: {
     eyebrow: "Sinblix POS",

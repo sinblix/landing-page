@@ -3,14 +3,16 @@ import type { Translation } from "./es";
 // English mirror of es.ts. The mock product UI (POS window, WhatsApp chat) stays in Spanish.
 export const en: Translation = {
   metadata: {
-    title: "Sinblix | POS system and AI WhatsApp assistant for businesses",
+    title: "Sinblix | Software factory in Venezuela · POS system and AI WhatsApp assistant",
     description:
-      "Sales and inventory in dollars and bolívares at the BCV rate, even offline, and an AI assistant that answers your WhatsApp 24/7. Try it free for 30 days.",
+      "Sinblix is a software factory in Venezuela specialized in custom software development, web and mobile solutions, cloud and DevOps, and artificial intelligence. Makers of Sinblix POS and Aria, the AI assistant for WhatsApp.",
   },
   nav: {
     label: "Main",
     skip: "Skip to content",
     menu: "Menu",
+    nosotros: "About",
+    servicios: "Services",
     pos: "Sinblix POS",
     aria: "Aria",
     desarrollo: "Development",
@@ -22,7 +24,7 @@ export const en: Translation = {
     home: "Sinblix, home",
   },
   hero: {
-    eyebrow: "POS system and AI WhatsApp assistant · Venezuela and Colombia",
+    eyebrow: "Software factory in Venezuela · POS system and AI WhatsApp assistant",
     title: { lead: "Your till balanced and your WhatsApp answered, ", em: "even when you are away." },
     lead: "Sinblix POS keeps your sales, inventory and store credit in dollars and bolívares at the day's BCV rate. Aria, our AI assistant, answers your business WhatsApp 24 hours a day.",
     trial: "Try Sinblix POS free for 30 days",
@@ -50,6 +52,43 @@ export const en: Translation = {
       "VENEZUELA",
       "COLOMBIA",
     ],
+  },
+  nosotros: {
+    eyebrow: "About us",
+    title: { lead: "Sinblix is a software factory ", em: "in Venezuela." },
+    body: "We specialize in custom software development, web and mobile solutions, cloud and DevOps, and artificial intelligence. We work with companies in Barquisimeto, Caracas, all of Venezuela and Latin America, turning ideas into software that drives your business.",
+    products: "Sinblix POS and Aria are our own products.",
+  },
+  servicios: {
+    eyebrow: "Services",
+    title: { lead: "Complete technology solutions ", em: "to grow your business." },
+    items: [
+      {
+        title: "Custom software development",
+        body: "Systems built for your business's specific needs.",
+      },
+      {
+        title: "Web and mobile development",
+        body: "Modern, fast and scalable websites and mobile apps.",
+      },
+      {
+        title: "Cloud and DevOps",
+        body: "Cloud infrastructure, automation and continuous deployment.",
+      },
+      {
+        title: "Artificial intelligence",
+        body: "AI and machine learning to automate processes, forecast and decide better.",
+      },
+      {
+        title: "Process automation",
+        body: "Automatic workflows with n8n and other tools, with fewer errors.",
+      },
+      {
+        title: "Technology consulting",
+        body: "Advice to improve your processes and adopt the right technology.",
+      },
+    ],
+    cta: "Tell us about your project",
   },
   pos: {
     eyebrow: "Sinblix POS",

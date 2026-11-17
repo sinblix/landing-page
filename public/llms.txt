@@ -1,6 +1,10 @@
 # Sinblix
 
-> Sinblix hace software para negocios pequeños y medianos en Venezuela y Colombia: Sinblix POS (sistema de ventas e inventario en la nube), Aria (asistente con IA que responde el WhatsApp del negocio) y desarrollo de sistemas y páginas web a la medida. Trabaja en línea en toda Venezuela y Colombia.
+> Sinblix es una fábrica de software en Venezuela especializada en desarrollo de software a medida, soluciones web y móvil, cloud y DevOps, e inteligencia artificial. Para negocios pequeños y medianos en Venezuela y Colombia ofrece Sinblix POS (sistema de ventas e inventario en la nube), Aria (asistente con IA que responde el WhatsApp del negocio) y desarrollo de sistemas y páginas web a la medida. Trabaja en línea en toda Venezuela y Colombia.
+
+## Servicios
+
+- [Servicios](https://www.sinblix.com/#servicios): desarrollo de software a medida, desarrollo web y móvil, cloud y DevOps, inteligencia artificial, automatización de procesos (n8n) y consultoría tecnológica.
 
 ## Productos
 

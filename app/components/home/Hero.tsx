@@ -71,7 +71,7 @@ export function Hero() {
   const t = useTranslation();
   const h = t.hero;
   return (
-    <section id="top" className="hero">
+    <section id="inicio" className="hero">
       <div className="hero__inner">
         <div className="hero__row">
           <div className="hero__copy sx-load">

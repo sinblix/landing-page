@@ -1,11 +1,13 @@
 /*
   Sinblix home: "Noche en movimiento" (the approved design, Movimiento.dc.html).
-  Sections: hero (3D liquid + POS window), marquee, #pos, #aria, #vender-aqui, #precios, #desarrollo,
+  Sections: #nosotros (first, id "top"), hero (3D liquid + POS window), marquee, #servicios, #pos, #aria, #vender-aqui, #precios, #desarrollo,
   #preguntas, closing. Styles and motion live in app/globals.css.
 */
 import { SiteNav } from "./components/home/SiteNav";
 import { Hero } from "./components/home/Hero";
 import { Marquee } from "./components/home/Marquee";
+import { Nosotros } from "./components/home/Nosotros";
+import { Servicios } from "./components/home/Servicios";
 import { PosSection } from "./components/home/PosSection";
 import { AriaSection } from "./components/home/AriaSection";
 import { VenderAqui } from "./components/home/VenderAqui";
@@ -21,8 +23,10 @@ export default function Home() {
       <div className="progress sx-progress" aria-hidden="true" />
       <SiteNav />
       <main id="main">
+        <Nosotros />
         <Hero />
         <Marquee />
+        <Servicios />
         <PosSection />
         <AriaSection />
         <VenderAqui />
