@@ -58,6 +58,7 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+58-412-178-5954",
+    email: "admin@sinblix.com",
     contactType: "customer service",
     areaServed: ["VE", "CO"],
     availableLanguage: ["Spanish", "English"],
@@ -118,9 +119,10 @@ const ariaSchema = {
 const desarrolloSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: es.desarrollo.title,
-  serviceType: "Desarrollo de software y páginas web a la medida",
-  description: es.desarrollo.line,
+  name: "Desarrollo de software a medida",
+  serviceType: es.servicios.items.map((item) => item.title).join(", "),
+  description: es.nosotros.body,
+  url: `${baseUrl}/#servicios`,
   provider: { "@type": "Organization", name: "Sinblix", url: baseUrl },
   areaServed,
 };

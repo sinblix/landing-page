@@ -5,7 +5,7 @@ import { useTranslation } from "@/app/i18n/hooks";
 import { links } from "@/app/config/links";
 import { LanguageSelector } from "../LanguageSelector";
 
-// The logo, four section links and the main action. Below 768px the links fold behind a menu
+// The logo, the section links and the main action. Below 768px the links fold behind a menu
 // button; the logo, ES/EN and the action stay in the bar. On the legal pages the links point back
 // to the home page's sections.
 export function SiteNav({ onHome = true }: { onHome?: boolean }) {
@@ -13,10 +13,11 @@ export function SiteNav({ onHome = true }: { onHome?: boolean }) {
   const [open, setOpen] = useState(false);
   const base = onHome ? "" : "/";
   const items = [
+    { href: `${base}#nosotros`, label: t.nav.nosotros },
+    { href: `${base}#servicios`, label: t.nav.servicios },
     { href: `${base}#pos`, label: t.nav.pos },
     { href: `${base}#aria`, label: t.nav.aria },
     { href: `${base}#precios`, label: t.nav.precios },
-    { href: `${base}#desarrollo`, label: t.nav.desarrollo },
     { href: `${base}#preguntas`, label: t.nav.preguntas },
   ];
 

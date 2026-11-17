@@ -16,11 +16,11 @@ export function Closing() {
           <em className="sx-sheen">{c.title.em}</em>
         </h2>
         <div className="btn-row">
-          <a className="btn btn--accent sx-btn sx-shine" href={links.trial}>
-            {c.trial}
+          <a className="btn btn--accent sx-btn sx-shine" href={links.quote}>
+            {c.quote}
           </a>
-          <a className="btn btn--ghost sx-btn" href={links.aria}>
-            {c.aria}
+          <a className="btn btn--ghost sx-btn" href={links.trial}>
+            {c.trial}
           </a>
         </div>
       </div>

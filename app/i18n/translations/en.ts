@@ -3,17 +3,18 @@ import type { Translation } from "./es";
 // English mirror of es.ts. The mock product UI (POS window, WhatsApp chat) stays in Spanish.
 export const en: Translation = {
   metadata: {
-    title: "Sinblix | POS system and AI WhatsApp assistant for businesses",
+    title: "Sinblix | Software factory in Venezuela · POS system and AI WhatsApp assistant",
     description:
-      "Sales and inventory in dollars and bolívares at the BCV rate, even offline, and an AI assistant that answers your WhatsApp 24/7. Try it free for 30 days.",
+      "Sinblix is a software factory in Venezuela specialized in custom software development, web and mobile solutions, cloud and DevOps, and artificial intelligence. Makers of Sinblix POS and Aria, the AI assistant for WhatsApp.",
   },
   nav: {
     label: "Main",
     skip: "Skip to content",
     menu: "Menu",
+    nosotros: "About",
+    servicios: "Services",
     pos: "Sinblix POS",
     aria: "Aria",
-    desarrollo: "Development",
     precios: "Pricing",
     preguntas: "Questions",
     cta: "Try it free for 30 days",
@@ -22,12 +23,12 @@ export const en: Translation = {
     home: "Sinblix, home",
   },
   hero: {
-    eyebrow: "POS system and AI WhatsApp assistant · Venezuela and Colombia",
+    eyebrow: "Software factory in Venezuela · POS system and AI WhatsApp assistant",
     title: { lead: "Your till balanced and your WhatsApp answered, ", em: "even when you are away." },
     lead: "Sinblix POS keeps your sales, inventory and store credit in dollars and bolívares at the day's BCV rate. Aria, our AI assistant, answers your business WhatsApp 24 hours a day.",
     trial: "Try Sinblix POS free for 30 days",
     aria: "Talk to Aria on WhatsApp",
-    note: "Plans from $10 a month. We work online across Venezuela and Colombia.",
+    note: "Plans from $10 a month, in Venezuela and Colombia.",
     canvasLabel:
       "Dark 3D liquid drops with orange and amber highlights that turn, melt together and follow the cursor",
     chips: {
@@ -50,6 +51,43 @@ export const en: Translation = {
       "VENEZUELA",
       "COLOMBIA",
     ],
+  },
+  nosotros: {
+    eyebrow: "About us",
+    title: { lead: "Sinblix is a software factory ", em: "in Venezuela." },
+    body: "We specialize in custom software development, web and mobile solutions, cloud and DevOps, and artificial intelligence. From Barquisimeto and Caracas we work online with companies across Venezuela and Colombia, and build custom projects for the rest of Latin America.",
+    products: "Sinblix POS and Aria are our own products.",
+  },
+  servicios: {
+    eyebrow: "Services",
+    title: { lead: "Complete technology solutions ", em: "to grow your business." },
+    items: [
+      {
+        title: "Custom software development",
+        body: "Systems built for your business's specific needs.",
+      },
+      {
+        title: "Web and mobile development",
+        body: "Modern, fast and scalable websites and mobile apps.",
+      },
+      {
+        title: "Cloud and DevOps",
+        body: "Cloud infrastructure, automation and continuous deployment.",
+      },
+      {
+        title: "Artificial intelligence",
+        body: "AI and machine learning to automate processes, forecast and decide better.",
+      },
+      {
+        title: "Process automation",
+        body: "Automatic workflows with n8n and other tools, with fewer errors.",
+      },
+      {
+        title: "Technology consulting",
+        body: "Advice to improve your processes and adopt the right technology.",
+      },
+    ],
+    cta: "Tell us about your project",
   },
   pos: {
     eyebrow: "Sinblix POS",
@@ -101,13 +139,6 @@ export const en: Translation = {
       ],
     },
   },
-  desarrollo: {
-    title: "Custom development",
-    line: "A system or a website built for how your business works.",
-    heading: { lead: "A system or a website built for ", em: "how your business works." },
-    body: "Tell us in two lines what you need and an advisor sends you a quote.",
-    cta: "Request a quote on WhatsApp",
-  },
   faq: {
     title: "Frequently asked questions",
     items: [
@@ -132,19 +163,30 @@ export const en: Translation = {
         a: "Sinblix POS starts at $10 a month with a 30-day free trial. Aria starts at $15 a month.",
       },
       {
+        q: "How long does custom development take?",
+        a: "A small project takes 2 to 4 weeks and a complex one 3 to 6 months or more. The exact timeline comes with the quote.",
+      },
+      {
+        q: "How do you charge for custom development?",
+        a: "By project, by the hour or by sprint, with no hidden costs. After launch we provide maintenance, updates and training.",
+      },
+      {
         q: "Do you work with businesses in Colombia?",
         a: "Yes. We work online across Venezuela and Colombia, and in Colombia we bill you in pesos.",
       },
     ],
   },
   close: {
-    title: { lead: "Try Sinblix POS ", em: "free for 30 days." },
+    title: { lead: "Tell us about your project ", em: "or try Sinblix POS free." },
+    quote: "Message us on WhatsApp",
     trial: "Create my free account",
-    aria: "Talk to Aria",
   },
   footer: {
     privacy: "Privacy policy",
     terms: "Terms of service",
     instagram: "Instagram",
+    whatsapp: "WhatsApp +58 412 178 5954",
+    email: "admin@sinblix.com",
+    place: "Barquisimeto, Venezuela",
   },
 };
