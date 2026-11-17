@@ -1229,9 +1229,42 @@ body {
 }
 .about {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 64px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.about__mascot {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.about__glow {
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 122, 47, 0.38), rgba(255, 181, 71, 0.12) 45%, rgba(255, 122, 47, 0) 70%);
+  filter: blur(10px);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .about__glow {
+    animation: about-glow 6s ease-in-out infinite alternate;
+  }
+}
+@keyframes about-glow {
+  from { transform: scale(0.9); opacity: 0.7; }
+  to { transform: scale(1.1); opacity: 1; }
+}
+.about__mango {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.55));
 }
 .about__title {
   font-size: clamp(42px, 5vw, 72px);
@@ -1251,6 +1284,9 @@ body {
   color: var(--ink);
 }
 @media (max-width: 860px) {
+  .about__mango {
+    max-width: 260px;
+  }
   .about {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
