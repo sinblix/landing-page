@@ -187,6 +187,7 @@ export const es = {
     terms: "Términos de servicio",
     instagram: "Instagram",
     whatsapp: "WhatsApp +58 412 178 5954",
+    email: "admin@sinblix.com",
     place: "Barquisimeto, Venezuela",
   },
 };

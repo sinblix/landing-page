@@ -186,6 +186,7 @@ export const en: Translation = {
     terms: "Terms of service",
     instagram: "Instagram",
     whatsapp: "WhatsApp +58 412 178 5954",
+    email: "admin@sinblix.com",
     place: "Barquisimeto, Venezuela",
   },
 };

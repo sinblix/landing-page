@@ -58,6 +58,7 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+58-412-178-5954",
+    email: "admin@sinblix.com",
     contactType: "customer service",
     areaServed: ["VE", "CO"],
     availableLanguage: ["Spanish", "English"],

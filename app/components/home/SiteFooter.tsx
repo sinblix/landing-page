@@ -3,7 +3,7 @@
 import { useTranslation } from "@/app/i18n/hooks";
 import { links } from "@/app/config/links";
 
-// One footer for every page: the name and city, WhatsApp, the legal links and Instagram, the year.
+// One footer for every page: the name and city, WhatsApp, email, the legal links and Instagram, the year.
 export function SiteFooter() {
   const t = useTranslation();
   return (
@@ -17,6 +17,7 @@ export function SiteFooter() {
         </div>
         <div className="site-foot__links">
           <a href={links.whatsapp}>{t.footer.whatsapp}</a>
+          <a href={links.email}>{t.footer.email}</a>
           <a href={links.privacy}>{t.footer.privacy}</a>
           <a href={links.terms}>{t.footer.terms}</a>
           <a href={links.instagram}>{t.footer.instagram}</a>
